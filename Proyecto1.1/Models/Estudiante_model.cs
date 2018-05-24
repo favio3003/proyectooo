@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Proyecto1._1.Models
 {
-    public class Estudiante_model
+    public class Estudiante_Model
     {
         public int id { get; set; }
         public string ci { get; set; }
@@ -16,5 +16,6 @@ namespace Proyecto1._1.Models
         public bool sexo { get; set; }
         public string correoelectronico { get; set; }
         public bool esayudante { get; set; }
+
     }
 }

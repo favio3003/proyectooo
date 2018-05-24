@@ -16,12 +16,12 @@ namespace Proyecto1._1.Controllers
             _context = new ApplicationDbContext();
         }
         //GET /API/Estudiante
-        public IEnumerable<Estudiante_model> GetEstudiante_()
+        public IEnumerable<Estudiante_Model> GetEstudiante_()
         {
             return _context.Estudiante.ToList();
         }
         //GET /API/Estudiante/1
-        public Estudiante_model GetEstudiante(int id)
+        public Estudiante_Model GetEstudiante(int id)
         {
             var estudiante = _context.Estudiante.SingleOrDefault(i => i.id == id);
             if (estudiante == null)
@@ -30,7 +30,7 @@ namespace Proyecto1._1.Controllers
         }
         [HttpPost]
         //POST /API/Estudiantes
-        public void createEstudiante(Estudiante_model est)
+        public void createEstudiante(Estudiante_Model est)
         {
             if (!ModelState.IsValid)
                 throw new HttpResponseException(HttpStatusCode.BadRequest);
@@ -39,7 +39,7 @@ namespace Proyecto1._1.Controllers
         }
         [HttpPut]
         //PUT /API/Estudiantes
-        public void updateEstudainte(Estudiante_model est)
+        public void updateEstudainte(Estudiante_Model est)
         {
             if (!ModelState.IsValid)
                 throw new HttpResponseException(HttpStatusCode.BadRequest);

@@ -20,9 +20,10 @@ namespace Proyecto1._1.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-        public DbSet<Estudiante_model> Estudiante { get; set; }
-        public DbSet<Pasante_Model> Pasante { get; set; }
+        public DbSet<Estudiante_Model> Estudiante { get; set; }
         public DbSet<Area_Model> Area { get; set; }
+        public DbSet<Materia_Model> Materia { get; set; }
+        public DbSet<unidadDeAprendizaje_Model> unidadDeAprendizaje { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
