@@ -16,6 +16,6 @@ namespace Proyecto1._1.Models
         public bool sexo { get; set; }
         public string correoelectronico { get; set; }
         public bool esayudante { get; set; }
-
+        public ICollection<Area_Model> Area { get; set; }
     }
 }

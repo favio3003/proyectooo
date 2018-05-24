@@ -295,3 +295,5 @@ C:\Users\Joel\Documents\GitHub\proyectooo\Proyecto1.1\bin\es\Microsoft.Owin.Secu
 C:\Users\Joel\Documents\GitHub\proyectooo\Proyecto1.1\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
 C:\Users\Joel\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Migrations.borradoDeTablaPasante.resources
 C:\Users\Joel\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Migrations.addMateria_UAP.resources
+C:\Users\Joel\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Migrations.addModelEstudainteArea.resources
+C:\Users\Joel\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Migrations.uapcontrollerAndOthers.resources

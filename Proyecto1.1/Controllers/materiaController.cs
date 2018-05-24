@@ -45,6 +45,7 @@ namespace Proyecto1._1.Controllers
                 throw new HttpResponseException(HttpStatusCode.BadRequest);
             var materia = _context.Materia.SingleOrDefault(c => c.id == mat.id);
             materia.nombre = mat.nombre;
+            materia.areaModel = mat.areaModel;
         }
         [HttpDelete]
         //DELETE /API/Materia/1
