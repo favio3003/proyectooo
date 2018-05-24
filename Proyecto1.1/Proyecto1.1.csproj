@@ -205,6 +205,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\materiaController.cs" />
+    <Compile Include="Controllers\unidadDeAprendizajeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -231,6 +232,14 @@
     <Compile Include="Migrations\201805241525162_addMateria_UAP.cs" />
     <Compile Include="Migrations\201805241525162_addMateria_UAP.Designer.cs">
       <DependentUpon>201805241525162_addMateria_UAP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805241833527_addModelEstudainteArea.cs" />
+    <Compile Include="Migrations\201805241833527_addModelEstudainteArea.Designer.cs">
+      <DependentUpon>201805241833527_addModelEstudainteArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805241932247_uapcontrollerAndOthers.cs" />
+    <Compile Include="Migrations\201805241932247_uapcontrollerAndOthers.Designer.cs">
+      <DependentUpon>201805241932247_uapcontrollerAndOthers.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -336,6 +345,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201805241525162_addMateria_UAP.resx">
       <DependentUpon>201805241525162_addMateria_UAP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805241833527_addModelEstudainteArea.resx">
+      <DependentUpon>201805241833527_addModelEstudainteArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805241932247_uapcontrollerAndOthers.resx">
+      <DependentUpon>201805241932247_uapcontrollerAndOthers.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
