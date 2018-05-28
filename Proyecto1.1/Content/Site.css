@@ -15,6 +15,86 @@
 .dl-horizontal dt {
     white-space: normal;
 }
+.classContainer {
+    position: relative;
+}
+
+.container-logo {
+    padding: 5px;
+    width: 100%;
+    height: 90px;
+    border-top: 2px solid green;
+    border-bottom: 1px solid black;
+    box-shadow: 0px 1px 1px 1px black;
+}
+
+.divUser {
+    float: right;
+    padding-top: 62px;
+    padding-right: 5px;
+}
+
+    .divUser > a {
+        color: #ff8200;
+        cursor: pointer;
+    }
+
+        .divUser > a:hover {
+            color: #ffb81c;
+        }
+
+.logo-image {
+    margin: 2px;
+    float: left;
+}
+
+    .logo-image > img {
+        height: 75px;
+        width: 200px;
+    }
+
+.name-app {
+    float: left;
+    margin-bottom: 20px;
+    height: 40px;
+}
+
+    .name-app > h1 {
+        padding-left: 15px;
+        padding-top: 7px;
+        font-weight: bold;
+        font-size: 28px;
+    }
+.partedeabajo-app > p {
+    padding-left: 15px;
+    padding-top: 7px;
+    font-weight: bold normal;
+    font-size: 10px;
+}
+
+.classIndex {
+    padding: 10px;
+}
+
+.title-form {
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.alinearDerecha {
+    text-align: right !important;
+}
+
+.alinearIzquierda {
+    text-align: left !important;
+}
+
+.alinearCentro {
+    text-align: center !important;
+}
+
 
 /* Set width on the form input elements since they're 100% wide by default */
 input,

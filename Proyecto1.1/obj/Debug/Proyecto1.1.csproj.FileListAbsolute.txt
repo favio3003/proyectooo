@@ -297,3 +297,7 @@ C:\Users\Joel\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Mig
 C:\Users\Joel\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Migrations.addMateria_UAP.resources
 C:\Users\Joel\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Migrations.addModelEstudainteArea.resources
 C:\Users\Joel\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Migrations.uapcontrollerAndOthers.resources
+C:\Users\Favio\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Migrations.borradoDeTablaPasante.resources
+C:\Users\Favio\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Migrations.addMateria_UAP.resources
+C:\Users\Favio\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Migrations.addModelEstudainteArea.resources
+C:\Users\Favio\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Migrations.uapcontrollerAndOthers.resources
