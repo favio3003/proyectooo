@@ -9,7 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Proyecto1._1.Models;
-
+//fijarse la linea 150 sobre la creacion de la tabla para la creacion de la misma y su funcionamiento en el cshtml.
 namespace Proyecto1._1.Controllers
 {
     [Authorize]
@@ -147,12 +147,12 @@ namespace Proyecto1._1.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Register(RegisterViewModel model)
+        public async Task<ActionResult> Register(NewEstudianteWithRegister model)
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
-                var result = await UserManager.CreateAsync(user, model.Password);
+                var user = new ApplicationUser { UserName = model.Register.Email, Email = model.Register.Email};
+                var result = await UserManager.CreateAsync(user, model.Register.Password);
                 if (result.Succeeded)
                 {
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);

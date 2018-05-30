@@ -2,62 +2,66 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Web.Http;
+using System.Web;
+using System.Web.Mvc;
+using System.Data.Entity;
 
 namespace Proyecto1._1.Controllers
 {
-    public class unidadDeAprendizajeController : ApiController
+    public class unidadDeAprendizajeController : Controller
     {
         private ApplicationDbContext _context;
+
         public unidadDeAprendizajeController()
         {
             _context = new ApplicationDbContext();
         }
-        //GET /API/unidadDeAprendizajes
-        public IEnumerable<unidadDeAprendizaje_Model> GetUnidadDeAprendizaje_()
+
+        protected override void Dispose(bool disposing)
         {
-            return _context.unidadDeAprendizaje.ToList();
+            _context.Dispose();
         }
-        //GET /API/unidadDeAprendizajeController/1
-        public unidadDeAprendizaje_Model GetunidadDeAprendizaje(int id)
+
+        public ActionResult Details(int Id)
         {
-            var uap = _context.unidadDeAprendizaje.SingleOrDefault(i => i.id == id);
+            var uap = _context.unidadDeAprendizaje.SingleOrDefault(c => c.id == Id);
             if (uap == null)
-                throw new HttpResponseException(HttpStatusCode.NotFound);
-            return uap;
+
+                return HttpNotFound();
+
+            return View(uap);
         }
-        [HttpPost]
-        //POST /API/unidadDeAprendizajes
-        public void createunidadDeAprendizaje(unidadDeAprendizaje_Model uaprendizaje)
+
+        [Authorize]
+        public ActionResult createUnidadDeAprendizaje(unidadDeAprendizaje_Model uap)
         {
-            if (!ModelState.IsValid)
-                throw new HttpResponseException(HttpStatusCode.BadRequest);
-            _context.unidadDeAprendizaje.Add(uaprendizaje);
+            _context.unidadDeAprendizaje.Add(uap);
             _context.SaveChanges();
+            return RedirectToAction("Index", "UnidadDeAprendizaje");
         }
-        [HttpPut]
-        //PUT /API/unidadDeAprendizajes
-        public void updateUnidadDeAprendizaje(unidadDeAprendizaje_Model uaprendizaje)
+
+        [Authorize]
+        public ActionResult editUnidadDeAprendizaje(int id)
         {
-            if (!ModelState.IsValid)
-                throw new HttpResponseException(HttpStatusCode.BadRequest);
-            var uap = _context.unidadDeAprendizaje.SingleOrDefault(c => c.id == uaprendizaje.id);
-            uap.nombre = uaprendizaje.nombre;
-            uap.idMateria = uaprendizaje.idMateria;
+            var uap = _context.unidadDeAprendizaje.FirstOrDefault(c => c.id == id);
+            if (uap == null)
+                return HttpNotFound();
+            unidadDeAprendizaje_Model unap = new unidadDeAprendizaje_Model();
+            unap.nombre = uap.nombre;
+            unap.idMateria = uap.idMateria;
+            return View("New", "UnidadDeAprendizaje");
         }
-        [HttpDelete]
-        //DELETE /API/unidadDeAprendizaje/1
-        public void deleteUnidadDeAprendizaje(int id)
+
+        [Authorize]
+        public ActionResult deleteUnidadDeAprendizaje(int id)
         {
-            var uapInDb = _context.unidadDeAprendizaje.SingleOrDefault(c => c.id == id);
-            if (uapInDb == null)
+            var uap = _context.unidadDeAprendizaje.FirstOrDefault(c => c.id == id);
+            if (uap.id == id)
             {
-                throw new HttpResponseException(HttpStatusCode.NotFound);
+                _context.unidadDeAprendizaje.Remove(uap);
             }
-            _context.unidadDeAprendizaje.Remove(uapInDb);
-            _context.SaveChanges();
+            return View("Index", "UnidadDeAprendizaje");
         }
+
     }
 }

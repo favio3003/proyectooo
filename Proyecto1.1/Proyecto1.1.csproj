@@ -248,6 +248,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Materia_Model.cs" />
+    <Compile Include="Models\NewEstudianteWithRegister.cs" />
     <Compile Include="Models\unidadDeAprendizaje_Model.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -312,6 +313,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\img\" />
     <Folder Include="Controllers\API\" />
     <Folder Include="Views\img\" />
   </ItemGroup>
