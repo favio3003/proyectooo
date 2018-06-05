@@ -1,5 +1,4 @@
 ﻿
-
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +14,6 @@ namespace Proyecto1._1
     {
         protected void Application_Start()
         {
-            
             GlobalConfiguration.Configure(WebApiConfig.Register);
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
