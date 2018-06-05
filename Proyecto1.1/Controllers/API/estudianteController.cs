@@ -2,68 +2,72 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Web.Http;
+using System.Web;
+using System.Web.Mvc;
+using System.Data.Entity;
 
 namespace Proyecto1._1.Controllers
 {
-    public class estudianteController : ApiController
+    public class estudianteController : Controller
     {
         private ApplicationDbContext _context;
+
         public estudianteController()
         {
             _context = new ApplicationDbContext();
         }
-        //GET /API/Estudiante
-        public IEnumerable<Estudiante_Model> GetEstudiante_()
+
+        protected override void Dispose(bool disposing)
         {
-            return _context.Estudiante.ToList();
+            _context.Dispose();
         }
-        //GET /API/Estudiante/1
-        public Estudiante_Model GetEstudiante(int id)
+
+        public ActionResult Details(int Id)
         {
-            var estudiante = _context.Estudiante.SingleOrDefault(i => i.id == id);
-            if (estudiante == null)
-                throw new HttpResponseException(HttpStatusCode.NotFound);
-            return estudiante;
+            var est = _context.Estudiante.SingleOrDefault(c => c.id == Id);
+            if (est == null)
+
+                return HttpNotFound();
+
+            return View(est);
         }
-        [HttpPost]
-        //POST /API/Estudiantes
-        public void createEstudiante(Estudiante_Model est)
+
+        [Authorize]
+        public ActionResult createEstudainte(Estudiante_Model est)
         {
-            if (!ModelState.IsValid)
-                throw new HttpResponseException(HttpStatusCode.BadRequest);
             _context.Estudiante.Add(est);
             _context.SaveChanges();
+            return RedirectToAction("Index", "Estudiante");
         }
-        [HttpPut]
-        //PUT /API/Estudiantes
-        public void updateEstudainte(Estudiante_Model est)
+
+        [Authorize]
+        public ActionResult editEstudiante(int id)
         {
-            if (!ModelState.IsValid)
-                throw new HttpResponseException(HttpStatusCode.BadRequest);
-            var estudiante = _context.Estudiante.SingleOrDefault(c => c.id == est.id);
-            estudiante.ci = est.ci;
-            estudiante.nombre = est.nombre;
-            estudiante.apellido = est.apellido;
-            estudiante.fechadenacimiento = est.fechadenacimiento;
-            estudiante.telefono = est.telefono;
-            estudiante.sexo = est.sexo;
-            estudiante.correoelectronico = est.correoelectronico;
-            estudiante.esayudante = est.esayudante;
+            var est = _context.Estudiante.FirstOrDefault(c => c.id == id);
+            if (est == null)
+                return HttpNotFound();
+            Estudiante_Model e = new Estudiante_Model();
+            e.ci = est.ci;
+            e.nombre = est.nombre;
+            e.apellido = est.apellido;
+            e.fechadenacimiento = est.fechadenacimiento;
+            e.telefono = est.telefono;
+            e.sexo = est.sexo;
+            e.correoelectronico = est.correoelectronico;
+            e.esayudante = est.esayudante;
+            return View("New", "Estudiante");
         }
-        [HttpDelete]
-        //DELETE /API/tudiante/1
-        public void deleteEstudiante(int id)
+
+        [Authorize]
+        public ActionResult deleteEstudiante(int id)
         {
-            var estudianteInDb = _context.Estudiante.SingleOrDefault(c => c.id == id);
-            if (estudianteInDb == null)
+            var est = _context.Estudiante.FirstOrDefault(c => c.id == id);
+            if (est.id == id)
             {
-                throw new HttpResponseException(HttpStatusCode.NotFound);
+                _context.Estudiante.Remove(est);
             }
-            _context.Estudiante.Remove(estudianteInDb );
-            _context.SaveChanges();
+            return View("Index", "Estudiante");
         }
+
     }
 }

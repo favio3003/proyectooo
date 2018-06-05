@@ -1,45 +1,87 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
+  
+    
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
+
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Nombre de aplicación", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+    <div class="classContainer">
+        <div class="container-logo">
+            <div class="logo-image">
+                <img src="~/Content/img/Logo.png" class=" logo-image"/>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Acerca de", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
-                </ul>
-                @Html.Partial("_LoginPartial")
+            <div class="name-app">
+                <h1>Ayudantia Social</h1>
             </div>
         </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Mi aplicación ASP.NET</p>
-        </footer>
-    </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+        <div class="navbar navbar-inverse navbar-static-top">
+            <div class="container-nav">
+                <div class="navbar-header">
+
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("Ayudantia", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav"></ul>
+                    @Html.Partial("_LoginPartial")
+                    <ul class="nav navbar-nav menuDropdown">
+                        <li id="liAdm" class="dropdown seguridadnomin">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Administración<span class="caret"></span></a>
+                            <ul class="dropdown-menu submenu">
+                                <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
+
+                                <li class="divider"></li>
+                                <li>@Html.ActionLink("Acerca de", "About", "Home")</li>
+                                <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
+                                <li>@Html.ActionLink("Necesitas Ayuda", "NecesitasAyudaView", "Home")</li>
+                            </ul>
+                        </li>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="container body-content">
+            <div class="alinearIzquierda">
+                <div class="classContainer">
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+
+            <div class=" alinearCentro">
+                <div class="partedeabajo-app">
+                    <div class="container body-content">
+
+                        <hr />
+                        <footer>
+                            <p> Reservada por derecho de Autor. @DateTime.Now.Year </p>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+
+            @Scripts.Render("~/bundles/jquery")
+            @Scripts.Render("~/bundles/bootstrap")
+
+            @RenderSection("scripts", required: false)
+        </div>
 </body>
+
+
+       
+   
 </html>

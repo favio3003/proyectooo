@@ -2,61 +2,65 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Web.Http;
+using System.Web;
+using System.Web.Mvc;
+using System.Data.Entity;
 
 namespace Proyecto1._1.Controllers
 {
-    public class materiaController : ApiController
+    public class materiaController : Controller
     {
         private ApplicationDbContext _context;
+
         public materiaController()
         {
             _context = new ApplicationDbContext();
         }
-        //GET /API/Materias
-        public IEnumerable<Materia_Model> GetMateria_()
+
+        protected override void Dispose(bool disposing)
         {
-            return _context.Materia.ToList();
+            _context.Dispose();
         }
-        //GET /API/MAteria/1
-        public Materia_Model GetMateria(int id)
+
+        public ActionResult Details(int Id)
         {
-            var materia = _context.Materia.SingleOrDefault(i => i.id == id);
-            if (materia == null)
-                throw new HttpResponseException(HttpStatusCode.NotFound);
-            return materia;
+            var mat = _context.Materia.SingleOrDefault(c => c.id == Id);
+            if (mat == null)
+
+                return HttpNotFound();
+
+            return View(mat);
         }
-        [HttpPost]
-        //POST /API/Materias
-        public void createMateria(Materia_Model mat)
+
+        [Authorize]
+        public ActionResult createMateria(Materia_Model mat)
         {
-            if (!ModelState.IsValid)
-                throw new HttpResponseException(HttpStatusCode.BadRequest);
             _context.Materia.Add(mat);
             _context.SaveChanges();
+            return RedirectToAction("Index", "Materia");
         }
-        [HttpPut]
-        //PUT /API/Materias
-        public void updateArea(Materia_Model mat)
+
+        [Authorize]
+        public ActionResult editMateria(int id)
         {
-            if (!ModelState.IsValid)
-                throw new HttpResponseException(HttpStatusCode.BadRequest);
-            var materia = _context.Materia.SingleOrDefault(c => c.id == mat.id);
-            materia.nombre = mat.nombre;
+            var mat = _context.Materia.FirstOrDefault(c => c.id == id);
+            if (mat == null)
+                return HttpNotFound();
+            Materia_Model m = new Materia_Model();
+            m.nombre = mat.nombre;
+            return View("New", "Materia");
         }
-        [HttpDelete]
-        //DELETE /API/Materia/1
-        public void deleteMateria(int id)
+
+        [Authorize]
+        public ActionResult deleteMateria(int id)
         {
-            var materiaInDb = _context.Materia.SingleOrDefault(c => c.id == id);
-            if (materiaInDb == null)
+            var mat = _context.Materia.FirstOrDefault(c => c.id == id);
+            if (mat.id == id)
             {
-                throw new HttpResponseException(HttpStatusCode.NotFound);
+                _context.Materia.Remove(mat);
             }
-            _context.Materia.Remove(materiaInDb);
-            _context.SaveChanges();
+            return View("Index", "Materia");
         }
+
     }
 }
