@@ -309,11 +309,11 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Estudiante\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\area\" />
-    <Folder Include="Views\Estudiante\" />
     <Folder Include="Views\Materia\" />
     <Folder Include="Views\UnidadDeAprendizaje\" />
   </ItemGroup>

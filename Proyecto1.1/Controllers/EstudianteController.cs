@@ -22,6 +22,12 @@ namespace Proyecto1._1.Controllers
             _context.Dispose();
         }
 
+        public ActionResult Lista()
+        {
+            var Estudiante = _context.Estudiante.ToList();
+            return View(Estudiante);
+        }
+
         public ActionResult Details(int Id)
         {
             var est = _context.Estudiante.SingleOrDefault(c => c.id == Id);
@@ -37,7 +43,8 @@ namespace Proyecto1._1.Controllers
         {
             _context.Estudiante.Add(est);
             _context.SaveChanges();
-            return RedirectToAction("Index", "Estudiante");
+            // return RedirectToAction("Index", "Estudiante");
+            return View("Index");
         }
 
         [Authorize]

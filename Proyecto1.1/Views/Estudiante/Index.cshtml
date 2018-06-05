@@ -1,0 +1,23 @@
+﻿@model Proyecto1._1.Models.Estudiante_Model
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+@using (Html.BeginForm("createEstudainte", "Estudiante"))
+{
+<div class="form-group">
+    @Html.LabelFor(c => c.nombre)
+    @Html.TextBoxFor(c => c.nombre, new { @class = "form-control" })
+    @Html.LabelFor(c => c.apellido)
+    @Html.TextBoxFor(c => c.apellido, new { @class = "form-control" })
+    @Html.LabelFor(c => c.fechadenacimiento)
+    @Html.EditorFor(c => c.fechadenacimiento, new { htmlAttributes = new { @class = "form-control datepicker", Value = DateTime.Now.ToShortDateString(), @type = "date" } })
+    @Html.LabelFor(c => c.nombre)
+    @Html.TextBoxFor(c => c.nombre, new { @class = "form-control" })
+    @Html.LabelFor(c => c.nombre)
+    @Html.TextBoxFor(c => c.nombre, new { @class = "form-control" })
+</div>
+}
+
