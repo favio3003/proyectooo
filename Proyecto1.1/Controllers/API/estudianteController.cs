@@ -2,72 +2,70 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using System.Data.Entity;
+using System.Net;
+using System.Net.Http;
+using System.Web.Http;
 
-namespace Proyecto1._1.Controllers
+namespace Proyecto1._1.Controllers.API
 {
-    public class estudianteController : Controller
+    public class EstudianteController : ApiController
     {
         private ApplicationDbContext _context;
-
-        public estudianteController()
+        public EstudianteController()
         {
             _context = new ApplicationDbContext();
         }
-
-        protected override void Dispose(bool disposing)
+        public IEnumerable<Estudiante_Model> GetEstudiante()
         {
-            _context.Dispose();
+            return _context.Estudiante.ToList();
         }
-
-        public ActionResult Details(int Id)
+        public Estudiante_Model GetEstudiante(int id)
         {
-            var est = _context.Estudiante.SingleOrDefault(c => c.id == Id);
-            if (est == null)
-
-                return HttpNotFound();
-
-            return View(est);
+            var customer = _context.Estudiante.SingleOrDefault(c => c.id == id);
+            if (customer == null)
+                throw new HttpResponseException(HttpStatusCode.NotFound);
+            return customer;
         }
-
-        [Authorize]
-        public ActionResult createEstudainte(Estudiante_Model est)
+        [HttpPost]
+        public Estudiante_Model CreateEstudiante(Estudiante_Model Estudiante_model)
         {
-            _context.Estudiante.Add(est);
+            if (!ModelState.IsValid)
+                throw new HttpResponseException(HttpStatusCode.BadRequest);
+            _context.Estudiante.Add(Estudiante_model);
             _context.SaveChanges();
-            return RedirectToAction("Index", "Estudiante");
+            return Estudiante_model;
         }
-
-        [Authorize]
-        public ActionResult editEstudiante(int id)
+        [HttpPut]
+        public void UpdateEstudiante(int id, Estudiante_Model estudiante)
         {
-            var est = _context.Estudiante.FirstOrDefault(c => c.id == id);
-            if (est == null)
-                return HttpNotFound();
-            Estudiante_Model e = new Estudiante_Model();
-            e.ci = est.ci;
-            e.nombre = est.nombre;
-            e.apellido = est.apellido;
-            e.fechadenacimiento = est.fechadenacimiento;
-            e.telefono = est.telefono;
-            e.sexo = est.sexo;
-            e.correoelectronico = est.correoelectronico;
-            e.esayudante = est.esayudante;
-            return View("New", "Estudiante");
-        }
-
-        [Authorize]
-        public ActionResult deleteEstudiante(int id)
-        {
-            var est = _context.Estudiante.FirstOrDefault(c => c.id == id);
-            if (est.id == id)
+            if (!ModelState.IsValid)
+                throw new HttpResponseException(HttpStatusCode.BadRequest);
+            var estudianteDb = _context.Estudiante.SingleOrDefault(c => c.id == id);
+            if (estudianteDb == null)
             {
-                _context.Estudiante.Remove(est);
+                throw new HttpResponseException(HttpStatusCode.NotFound);
             }
-            return View("Index", "Estudiante");
+            estudianteDb.ci = estudiante.ci;
+            estudianteDb.nombre = estudiante.nombre;
+            estudianteDb.apellido = estudiante.apellido;
+            estudianteDb.fechadenacimiento = estudiante.fechadenacimiento;
+            estudianteDb.telefono = estudiante.telefono;
+            estudianteDb.sexo = estudiante.sexo;
+            estudianteDb.correoelectronico = estudiante.correoelectronico;
+            estudianteDb.esayudante = estudiante.esayudante;
+            _context.SaveChanges();
         }
 
+        [HttpDelete]
+        public void DeleteEstudiante(int id)
+        {
+            var EstudianteDb = _context.Estudiante.SingleOrDefault(c => c.id == id);
+            if (EstudianteDb == null)
+            {
+                throw new HttpResponseException(HttpStatusCode.NotFound);
+            }
+            _context.Estudiante.Remove(EstudianteDb);
+            _context.SaveChanges();
+        }
     }
 }
