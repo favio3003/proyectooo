@@ -241,9 +241,14 @@
     <Compile Include="Migrations\201805241525162_addMateria_UAP.Designer.cs">
       <DependentUpon>201805241525162_addMateria_UAP.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806051528352_addEstudianteArea.cs" />
+    <Compile Include="Migrations\201806051528352_addEstudianteArea.Designer.cs">
+      <DependentUpon>201806051528352_addEstudianteArea.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Area_Model.cs" />
+    <Compile Include="Models\estudianteArea.cs" />
     <Compile Include="Models\Estudiante_Model.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -348,6 +353,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201805241525162_addMateria_UAP.resx">
       <DependentUpon>201805241525162_addMateria_UAP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806051528352_addEstudianteArea.resx">
+      <DependentUpon>201806051528352_addEstudianteArea.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
