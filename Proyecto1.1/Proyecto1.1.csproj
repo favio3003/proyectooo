@@ -207,9 +207,13 @@
     <Compile Include="Controllers\API\unidaddeaprendizajeController.cs" />
     <Compile Include="Controllers\API\areaController.cs" />
     <Compile Include="Controllers\API\estudianteController.cs" />
+    <Compile Include="Controllers\AreaController.cs" />
+    <Compile Include="Controllers\EstudianteController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\API\materiaController.cs" />
+    <Compile Include="Controllers\MateriaController.cs" />
+    <Compile Include="Controllers\UnidadDeAprendizajeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -308,6 +312,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\area\" />
+    <Folder Include="Views\Estudiante\" />
+    <Folder Include="Views\Materia\" />
+    <Folder Include="Views\UnidadDeAprendizaje\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

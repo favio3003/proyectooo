@@ -8,11 +8,11 @@ using System.Data.Entity;
 
 namespace Proyecto1._1.Controllers
 {
-    public class unidadDeAprendizajeController : Controller
+    public class UnidadDeAprendizajeController : Controller
     {
         private ApplicationDbContext _context;
 
-        public unidadDeAprendizajeController()
+        public UnidadDeAprendizajeController()
         {
             _context = new ApplicationDbContext();
         }
