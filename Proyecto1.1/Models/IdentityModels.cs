@@ -24,7 +24,7 @@ namespace Proyecto1._1.Models
         public DbSet<Area_Model> Area { get; set; }
         public DbSet<Materia_Model> Materia { get; set; }
         public DbSet<unidadDeAprendizaje_Model> unidadDeAprendizaje { get; set; }
-        public DbSet<estudianteArea> estudianteArea { get; set; }
+        public DbSet<Solicitud_Model> solicitud { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {

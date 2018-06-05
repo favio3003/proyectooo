@@ -204,15 +204,17 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\API\AreaController.cs" />
+    <Compile Include="Controllers\API\EstudianteController.cs" />
+    <Compile Include="Controllers\API\MateriaController.cs" />
+    <Compile Include="Controllers\API\SolicitudController.cs" />
     <Compile Include="Controllers\API\unidaddeaprendizajeController.cs" />
-    <Compile Include="Controllers\API\areaController.cs" />
-    <Compile Include="Controllers\API\estudianteController.cs" />
     <Compile Include="Controllers\AreaController.cs" />
     <Compile Include="Controllers\EstudianteController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\API\materiaController.cs" />
     <Compile Include="Controllers\MateriaController.cs" />
+    <Compile Include="Controllers\SolicitudController.cs" />
     <Compile Include="Controllers\UnidadDeAprendizajeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -241,18 +243,18 @@
     <Compile Include="Migrations\201805241525162_addMateria_UAP.Designer.cs">
       <DependentUpon>201805241525162_addMateria_UAP.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201806051528352_addEstudianteArea.cs" />
-    <Compile Include="Migrations\201806051528352_addEstudianteArea.Designer.cs">
-      <DependentUpon>201806051528352_addEstudianteArea.cs</DependentUpon>
+    <Compile Include="Migrations\201806051507009_addSolicitud.cs" />
+    <Compile Include="Migrations\201806051507009_addSolicitud.Designer.cs">
+      <DependentUpon>201806051507009_addSolicitud.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Area_Model.cs" />
-    <Compile Include="Models\estudianteArea.cs" />
     <Compile Include="Models\Estudiante_Model.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Materia_Model.cs" />
+    <Compile Include="Models\Solicitud_Model.cs" />
     <Compile Include="Models\unidadDeAprendizaje_Model.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -320,6 +322,7 @@
     <Folder Include="Views\area\" />
     <Folder Include="Views\Estudiante\" />
     <Folder Include="Views\Materia\" />
+    <Folder Include="Views\Solicitud\" />
     <Folder Include="Views\UnidadDeAprendizaje\" />
   </ItemGroup>
   <ItemGroup>
@@ -354,8 +357,8 @@
     <EmbeddedResource Include="Migrations\201805241525162_addMateria_UAP.resx">
       <DependentUpon>201805241525162_addMateria_UAP.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201806051528352_addEstudianteArea.resx">
-      <DependentUpon>201806051528352_addEstudianteArea.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201806051507009_addSolicitud.resx">
+      <DependentUpon>201806051507009_addSolicitud.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

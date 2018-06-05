@@ -2,65 +2,63 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using System.Data.Entity;
+using System.Net;
+using System.Net.Http;
+using System.Web.Http;
 
-namespace Proyecto1._1.Controllers
+namespace Proyecto1._1.Controllers.API
 {
-    public class areaController : Controller
+    public class AreaController : ApiController
     {
         private ApplicationDbContext _context;
-
-        public areaController()
+        public AreaController()
         {
             _context = new ApplicationDbContext();
         }
-
-        protected override void Dispose(bool disposing)
+        public IEnumerable<Area_Model> GetArea()
         {
-            _context.Dispose();
+            return _context.Area.ToList();
         }
-
-        public ActionResult Details(int Id)
+        public Area_Model GetArea(int id)
         {
-            var area = _context.Area.SingleOrDefault(c => c.id == Id);
-            if (area == null)
-
-                return HttpNotFound();
-
-            return View(area);
+            var customer = _context.Area.SingleOrDefault(c => c.id == id);
+            if (customer == null)
+                throw new HttpResponseException(HttpStatusCode.NotFound);
+            return customer;
         }
-
-        [Authorize]
-        public ActionResult createArea(Area_Model area)
+        [HttpPost]
+        public Area_Model CreateArea(Area_Model Area_model)
         {
-            _context.Area.Add(area);
+            if (!ModelState.IsValid)
+                throw new HttpResponseException(HttpStatusCode.BadRequest);
+            _context.Area.Add(Area_model);
             _context.SaveChanges();
-            return RedirectToAction("Index", "Area");
+            return Area_model;
         }
-
-        [Authorize]
-        public ActionResult editArea(int id)
+        [HttpPut]
+        public void UpdateArea(int id, Area_Model Area)
         {
-            var area = _context.Area.FirstOrDefault(c => c.id == id);
-            if (area == null)
-                return HttpNotFound();
-            Area_Model a = new Area_Model();
-            a.nombre = area.nombre;
-            return View("New", "Area");
-        }
-
-        [Authorize]
-        public ActionResult deleteArea(int id)
-        {
-            var area = _context.Area.FirstOrDefault(c => c.id == id);
-            if (area.id == id)
+            if (!ModelState.IsValid)
+                throw new HttpResponseException(HttpStatusCode.BadRequest);
+            var AreaDb = _context.Area.SingleOrDefault(c => c.id == id);
+            if (AreaDb == null)
             {
-                _context.Area.Remove(area);
+                throw new HttpResponseException(HttpStatusCode.NotFound);
             }
-            return View("Index", "Area");
+            AreaDb.nombre = Area.nombre;
+            _context.SaveChanges();
         }
 
+        [HttpDelete]
+        public void DeleteArea(int id)
+        {
+            var AreaDb = _context.Area.SingleOrDefault(c => c.id == id);
+            if (AreaDb == null)
+            {
+                throw new HttpResponseException(HttpStatusCode.NotFound);
+            }
+            _context.Area.Remove(AreaDb);
+            _context.SaveChanges();
+        }
     }
 }

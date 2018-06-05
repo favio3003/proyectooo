@@ -14,7 +14,6 @@ namespace Proyecto1._1
     {
         protected void Application_Start()
         {
-   
             GlobalConfiguration.Configure(WebApiConfig.Register);
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
