@@ -143,16 +143,16 @@ namespace Proyecto1._1.Controllers
         }
 
         //
-        // POST: /Account/Register
+        //POST: /Account/Register
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Register(NewEstudianteWithRegister model)
+        public async Task<ActionResult> Register(RegisterViewModel model)
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Register.Email, Email = model.Register.Email};
-                var result = await UserManager.CreateAsync(user, model.Register.Password);
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email};
+                var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);

@@ -1,4 +1,4 @@
-﻿@model Proyecto1._1.Models.NewEstudianteWithRegister
+﻿@model Proyecto1._1.Models.RegisterViewModel
 @{
     ViewBag.Title = "Registrarse";
 }
@@ -7,16 +7,6 @@
 <h4>Cree una cuenta nueva.</h4>
 <hr />
 
-@using (Html.BeginForm("createEstudiante", "estudiante"))
-
-{
-    
-
-
-
-
-
-}
 
 @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
 
