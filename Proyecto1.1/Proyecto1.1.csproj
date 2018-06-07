@@ -247,6 +247,10 @@
     <Compile Include="Migrations\201806051507009_addSolicitud.Designer.cs">
       <DependentUpon>201806051507009_addSolicitud.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806061343551_loquesea.cs" />
+    <Compile Include="Migrations\201806061343551_loquesea.Designer.cs">
+      <DependentUpon>201806061343551_loquesea.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Area_Model.cs" />
@@ -317,11 +321,15 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Estudiante\Index.cshtml" />
+    <Content Include="Views\Estudiante\New.cshtml" />
+    <Content Include="Views\Shared\LoyauddeCondiciones.cshtml" />
+    <Content Include="Views\Home\Condiciones.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\area\" />
     <Folder Include="Views\Materia\" />
+    <Folder Include="Views\Problemas\" />
     <Folder Include="Views\Solicitud\" />
     <Folder Include="Views\UnidadDeAprendizaje\" />
   </ItemGroup>
@@ -359,6 +367,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806051507009_addSolicitud.resx">
       <DependentUpon>201806051507009_addSolicitud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806061343551_loquesea.resx">
+      <DependentUpon>201806061343551_loquesea.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

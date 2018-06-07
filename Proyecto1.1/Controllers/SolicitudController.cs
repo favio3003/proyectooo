@@ -22,6 +22,11 @@ namespace Proyecto1._1.Controllers
             _context.Dispose();
         }
 
+        public ActionResult Index()
+        {
+            return View();
+        }
+
         public ActionResult Details(int Id)
         {
             var sol = _context.solicitud.SingleOrDefault(c => c.id == Id);

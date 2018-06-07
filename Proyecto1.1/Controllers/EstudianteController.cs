@@ -27,7 +27,10 @@ namespace Proyecto1._1.Controllers
             var Estudiante = _context.Estudiante.ToList();
             return View(Estudiante);
         }
-
+        public ActionResult Index()
+        {
+            return View();
+        }
         public ActionResult Details(int Id)
         {
             var est = _context.Estudiante.SingleOrDefault(c => c.id == Id);
@@ -60,7 +63,7 @@ namespace Proyecto1._1.Controllers
             e.fechadenacimiento = est.fechadenacimiento;
             e.telefono = est.telefono;
             e.sexo = est.sexo;
-            e.correoelectronico = est.correoelectronico;
+            
             e.esayudante = est.esayudante;
             return View("New", "Estudiante");
         }

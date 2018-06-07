@@ -13,6 +13,12 @@ namespace Proyecto1._1.Controllers
             return View();
         }
 
+        public ActionResult Condiciones ()
+        {
+            ViewBag.Message = "Terminos y Condiciones";
+            return View();
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
