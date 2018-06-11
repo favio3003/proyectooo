@@ -40,8 +40,11 @@ namespace Proyecto1._1.Controllers
 
             return View(est);
         }
-
-        [Authorize]
+        public ActionResult EstudianteView()
+        {
+            return View();
+        }
+        
         public ActionResult createEstudainte(Estudiante_Model est)
         {
             _context.Estudiante.Add(est);

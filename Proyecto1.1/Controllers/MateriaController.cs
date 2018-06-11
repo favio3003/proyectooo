@@ -26,6 +26,11 @@ namespace Proyecto1._1.Controllers
         {
             return View();
         }
+        public ActionResult Lista()
+        {
+            var Materia = _context.Materia.ToList();
+            return View(Materia);
+        }
 
         public ActionResult Details(int Id)
         {

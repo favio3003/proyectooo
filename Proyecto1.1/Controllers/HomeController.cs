@@ -18,6 +18,7 @@ namespace Proyecto1._1.Controllers
             ViewBag.Message = "Terminos y Condiciones";
             return View();
         }
+        
 
         public ActionResult About()
         {

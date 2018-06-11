@@ -409,3 +409,4 @@ C:\Users\Favio\Documents\GitHub\proyectooo\Proyecto1.1\bin\AutoMapper.dll
 C:\Users\Favio\Documents\GitHub\proyectooo\Proyecto1.1\bin\AutoMapper.xml
 C:\Users\Favio\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Migrations.addSolicitud.resources
 C:\Users\Favio\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Migrations.loquesea.resources
+C:\Users\Favio\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Migrations.loquesea23.resources

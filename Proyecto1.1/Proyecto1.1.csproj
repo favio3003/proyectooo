@@ -251,15 +251,21 @@
     <Compile Include="Migrations\201806061343551_loquesea.Designer.cs">
       <DependentUpon>201806061343551_loquesea.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806071432481_loquesea2.3.cs" />
+    <Compile Include="Migrations\201806071432481_loquesea2.3.Designer.cs">
+      <DependentUpon>201806071432481_loquesea2.3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Area_Model.cs" />
+    <Compile Include="Models\estudianteArea_Model.cs" />
     <Compile Include="Models\Estudiante_Model.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Materia_Model.cs" />
     <Compile Include="Models\Solicitud_Model.cs" />
     <Compile Include="Models\unidadDeAprendizaje_Model.cs" />
+    <Compile Include="Models\VistaMateriaArea_Model.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -322,13 +328,17 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Estudiante\Index.cshtml" />
     <Content Include="Views\Estudiante\New.cshtml" />
-    <Content Include="Views\Shared\LoyauddeCondiciones.cshtml" />
     <Content Include="Views\Home\Condiciones.cshtml" />
+    <Content Include="Views\Estudiante\Materia_Area.cshtml" />
+    <Content Include="Views\Estudiante\EstudianteView.cshtml" />
+    <Content Include="Views\area\Index.cshtml" />
+    <Content Include="Views\area\NuevaArea.cshtml" />
+    <Content Include="Views\Materia\Index.cshtml" />
+    <Content Include="Views\Materia\NuevaMateria.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\area\" />
-    <Folder Include="Views\Materia\" />
+    <Folder Include="Views\NewFolder1\" />
     <Folder Include="Views\Problemas\" />
     <Folder Include="Views\Solicitud\" />
     <Folder Include="Views\UnidadDeAprendizaje\" />
@@ -370,6 +380,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806061343551_loquesea.resx">
       <DependentUpon>201806061343551_loquesea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806071432481_loquesea2.3.resx">
+      <DependentUpon>201806071432481_loquesea2.3.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -1,19 +1,63 @@
 ﻿
-@{
-    ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
+@{            
+        ViewBag.Title = "Index";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+<h2>Estudiante</h2>
 <div class="row">
-    <div class="col-md-10">
-
-
-    </div>
-    <div class="col-md-2">
-        
-
+    <div class="col-md-8">
+        @Html.Partial("New")
 
     </div>
-</div>
-    <h2>Estudiante</h2>
-    @Html.Partial("New")
+    <div class="col-md-3">
+        <div class="tab-content">
+
+            <h3>Desea ver los pasantes disponibles?</h3> <br />
+            <p>
+                <h5>
+                    para poder ver los pasantes debes crear una cuenta de
+                    <button type="button" class="btn btn-link" data-toggle="modal" data-target=".EstudianteNuevo">Estudiante</button>
+                    para poder Tener acceso
+                </h5>
+                <div class="modal fade EstudianteNuevo" tabindex="-1" role="dialog">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title">Estudiante</h4>
+                            </div>
+                            <div class="modal-body">
+                              
+                            </div>
+                            <div class="modal-header">
+                                <h6>Al registrarse podra acceder alas materias con los pasantes  </h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </p>
+
+
+        </div>
+    </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

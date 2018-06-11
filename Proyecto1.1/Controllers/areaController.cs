@@ -21,6 +21,11 @@ namespace Proyecto1._1.Controllers
         {
             _context.Dispose();
         }
+        public ActionResult Lista()
+        {
+            var Area = _context.Area.ToList();
+            return View(Area);
+        }
 
         public ActionResult Index()
         {

@@ -26,6 +26,11 @@ namespace Proyecto1._1.Controllers
         {
             return View();
         }
+        public ActionResult Lista()
+        {
+            var UnidadAprendizaje = _context.unidadDeAprendizaje.ToList();
+            return View(UnidadAprendizaje);
+        }
 
         public ActionResult Details(int Id)
         {
