@@ -28,7 +28,7 @@ namespace Proyecto1._1.Controllers
         }
         public ActionResult Lista()
         {
-            var Materia = _context.Materia.ToList();
+            var Materia = _context.Materia.Include(c => c.areaModel).ToList();
             return View(Materia);
         }
 
