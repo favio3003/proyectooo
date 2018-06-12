@@ -11,5 +11,6 @@ namespace Proyecto1._1.Models
         public string telefono { get; set; }
         public string descripcion { get; set; }
         public Estudiante_Model estudiante { get; set; }
+        public Area_Model area { get; set; }
     }
 }

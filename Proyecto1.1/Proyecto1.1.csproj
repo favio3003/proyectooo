@@ -267,6 +267,14 @@
     <Compile Include="Migrations\201806112325584_actualizado.Designer.cs">
       <DependentUpon>201806112325584_actualizado.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806122002535_UpdateDatos.cs" />
+    <Compile Include="Migrations\201806122002535_UpdateDatos.Designer.cs">
+      <DependentUpon>201806122002535_UpdateDatos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806122116195_toStringSexo.cs" />
+    <Compile Include="Migrations\201806122116195_toStringSexo.Designer.cs">
+      <DependentUpon>201806122116195_toStringSexo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Area_Model.cs" />
@@ -405,6 +413,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806112325584_actualizado.resx">
       <DependentUpon>201806112325584_actualizado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806122002535_UpdateDatos.resx">
+      <DependentUpon>201806122002535_UpdateDatos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806122116195_toStringSexo.resx">
+      <DependentUpon>201806122116195_toStringSexo.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

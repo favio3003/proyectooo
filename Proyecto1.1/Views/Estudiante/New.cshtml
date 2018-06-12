@@ -21,9 +21,28 @@
 
     </div>
     <div class="form-group">
+        @Html.LabelFor(c => c.telefono, new { @class = "col-md-2 control-label" })
+
+        @Html.TextBoxFor(c => c.telefono, new { @class = "form-cntrol"})
+
+    </div>
+    <div class="form-group">
+        @{
+            List<SelectListItem> sexos = new List<SelectListItem>();
+            sexos.Add(new SelectListItem
+            {
+                Text = "Masculino",
+                Value = "M"
+            });
+            sexos.Add(new SelectListItem
+            {
+                Text = "Femenino",
+                Value ="F"
+            });
+        }
         @Html.LabelFor(c => c.sexo, new { @class = "col-md-2 control-label" })
 
-        @Html.TextBoxFor(c => c.sexo, new { @class = "form-control" })
+        @Html.DropDownListFor(model => model.sexo, sexos)
 
     </div>
     <div class="form-group">

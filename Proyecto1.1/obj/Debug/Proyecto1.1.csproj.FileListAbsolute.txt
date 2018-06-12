@@ -192,7 +192,6 @@ C:\Users\Favio\Documents\GitHub\proyectooo\Proyecto1.1\bin\System.Web.Http.xml
 C:\Users\Favio\Documents\GitHub\proyectooo\Proyecto1.1\bin\System.Web.Http.WebHost.xml
 C:\Users\Favio\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Migrations.createPasanteTable.resources
 C:\Users\Favio\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Migrations.createAreaTable.resources
-C:\Users\Joel\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1.1.csprojResolveAssemblyReference.cache
 C:\Users\Joel\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Migrations.activarmigration.resources
 C:\Users\Joel\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Migrations.createEstudianteTable.resources
 C:\Users\Joel\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Migrations.createPasanteTable.resources
@@ -295,8 +294,6 @@ C:\Users\Joel\Documents\GitHub\proyectooo\Proyecto1.1\bin\es\Microsoft.Owin.Secu
 C:\Users\Joel\Documents\GitHub\proyectooo\Proyecto1.1\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
 C:\Users\Joel\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Migrations.borradoDeTablaPasante.resources
 C:\Users\Joel\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Migrations.addMateria_UAP.resources
-C:\Users\Joel\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Migrations.addModelEstudainteArea.resources
-C:\Users\Joel\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Migrations.uapcontrollerAndOthers.resources
 C:\Users\Favio\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Migrations.borradoDeTablaPasante.resources
 C:\Users\Favio\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Migrations.addMateria_UAP.resources
 C:\Users\DELL\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1.1.csprojResolveAssemblyReference.cache
@@ -413,3 +410,15 @@ C:\Users\Favio\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Mi
 C:\Users\Favio\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Migrations.addCorreroElectronico.resources
 C:\Users\Favio\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Migrations.loquesea1.resources
 C:\Users\Favio\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Migrations.actualizado.resources
+C:\Users\JOEL\Documents\GitHub\proyectooo\Proyecto1.1\bin\AutoMapper.dll
+C:\Users\JOEL\Documents\GitHub\proyectooo\Proyecto1.1\bin\AutoMapper.xml
+C:\Users\JOEL\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1.1.csprojAssemblyReference.cache
+C:\Users\JOEL\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Migrations.addSolicitud.resources
+C:\Users\JOEL\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Migrations.loquesea.resources
+C:\Users\JOEL\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Migrations.loquesea23.resources
+C:\Users\JOEL\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Migrations.addCorreroElectronico.resources
+C:\Users\JOEL\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Migrations.loquesea1.resources
+C:\Users\JOEL\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Migrations.actualizado.resources
+C:\Users\JOEL\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1.1.csproj.CopyComplete
+C:\Users\JOEL\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Migrations.UpdateDatos.resources
+C:\Users\JOEL\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Migrations.toStringSexo.resources

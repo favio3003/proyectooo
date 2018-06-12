@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 
 namespace Proyecto1._1.Models
 {
@@ -23,8 +24,7 @@ namespace Proyecto1._1.Models
         [Display(Name = "Telefono")]
         public string telefono { get; set; }
         [Display(Name = "Sexo")]
-        public bool sexo { get; set; }
-        
+        public string sexo { get; set; }
         public bool esayudante { get; set; }
         public ICollection<Area_Model> Area { get; set; }
         public string Registerid { get; set; }
