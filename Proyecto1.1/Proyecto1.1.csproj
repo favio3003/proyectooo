@@ -348,6 +348,7 @@
     <Content Include="Views\Estudiante\Inicio.cshtml" />
     <Content Include="Views\Estudiante\_PartialMateriaDefault.cshtml" />
     <Content Include="Views\Estudiante\_PartialPasante.cshtml" />
+    <Content Include="Views\Materia\ListaView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

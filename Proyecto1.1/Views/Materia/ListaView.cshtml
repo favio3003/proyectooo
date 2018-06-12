@@ -1,0 +1,22 @@
+﻿@model IEnumerable<Proyecto1._1.Models.Materia_Model>
+
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Area</th>
+                <th>Materia</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var Materia in Model)
+            {
+                <tr>
+                    <td>@Materia.areaModel.nombre</td>
+                    <td>@Html.ActionLink(Materia.nombre, "editMateria", "Materia", new { id = Materia.id }, null)</td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+
