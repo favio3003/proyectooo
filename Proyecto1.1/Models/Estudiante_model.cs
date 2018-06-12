@@ -9,6 +9,7 @@ namespace Proyecto1._1.Models
     public class Estudiante_Model
     {
         public int id { get; set; }
+        [Display(Name = "Carnet de Identidad")]
         public string ci { get; set; }
 
         [Display(Name = "Nombre")]
@@ -17,6 +18,8 @@ namespace Proyecto1._1.Models
         public string apellido { get; set; }
         [Display(Name = "Fecha de Nacimiento")]
         public DateTime fechadenacimiento { get; set; }
+        [Display(Name = "Correo electronico")]
+        public string correoElectronico { get; set; }
         [Display(Name = "Telefono")]
         public string telefono { get; set; }
         [Display(Name = "Sexo")]
@@ -24,5 +27,6 @@ namespace Proyecto1._1.Models
         
         public bool esayudante { get; set; }
         public ICollection<Area_Model> Area { get; set; }
+        public string Registerid { get; set; }
     }
 }

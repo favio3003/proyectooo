@@ -51,13 +51,13 @@ namespace Proyecto1._1.Controllers
         }
 
         [Authorize]
-        public ActionResult editMateria(int id)
+        public ActionResult editMateria(Materia_Model m)
         {
-            var mat = _context.Materia.FirstOrDefault(c => c.id == id);
+            var mat = _context.Materia.FirstOrDefault(c => c.id == m.id);
             if (mat == null)
                 return HttpNotFound();
-            Materia_Model m = new Materia_Model();
-            m.nombre = mat.nombre;
+            mat.nombre = m.nombre;
+            _context.SaveChanges();
             return View("New", "Materia");
         }
 
@@ -69,6 +69,7 @@ namespace Proyecto1._1.Controllers
             {
                 _context.Materia.Remove(mat);
             }
+            _context.SaveChanges();
             return View("Index", "Materia");
         }
 

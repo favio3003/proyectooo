@@ -50,8 +50,7 @@ namespace Proyecto1._1.Controllers.API
             estudianteDb.apellido = estudiante.apellido;
             estudianteDb.fechadenacimiento = estudiante.fechadenacimiento;
             estudianteDb.telefono = estudiante.telefono;
-            estudianteDb.sexo = estudiante.sexo;
-          
+            estudianteDb.sexo = estudiante.sexo;          
             estudianteDb.esayudante = estudiante.esayudante;
             _context.SaveChanges();
         }

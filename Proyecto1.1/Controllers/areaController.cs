@@ -51,13 +51,13 @@ namespace Proyecto1._1.Controllers
         }
 
         [Authorize]
-        public ActionResult editArea(int id)
+        public ActionResult editArea(Area_Model ar)
         {
-            var area = _context.Area.FirstOrDefault(c => c.id == id);
+            var area = _context.Area.FirstOrDefault(c => c.id == ar.id);
             if (area == null)
                 return HttpNotFound();
-            Area_Model a = new Area_Model();
-            a.nombre = area.nombre;
+            area.nombre = ar.nombre;
+            _context.SaveChanges();
             return View("New", "Area");
         }
 
@@ -69,6 +69,7 @@ namespace Proyecto1._1.Controllers
             {
                 _context.Area.Remove(area);
             }
+            _context.SaveChanges();
             return View("Index", "Area");
         }
 

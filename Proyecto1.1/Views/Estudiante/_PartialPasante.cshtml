@@ -1,0 +1,24 @@
+﻿@model Proyecto1._1.Models.Solicitud_Model
+@using (Html.BeginForm("createSolicitud", "Solicitud"))
+{
+<div class="form-group">
+    <div class="form-group">
+        @Html.LabelFor(c => c.telefono, new { @class = "col-md-2 control-label" })
+
+        @Html.TextBoxFor(c => c.telefono, new { @class = "form-control" })
+
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(c => c.descripcion, new { @class = "col-md-2 control-label" })
+
+        @Html.TextAreaFor(c => c.descripcion, new { @class = "form-control" })
+
+    </div>
+
+    
+    <div class="right">
+        <button class="btn btn-primary">Enviar</button>
+    </div>
+
+</div>
+}

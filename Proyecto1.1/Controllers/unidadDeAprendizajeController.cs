@@ -51,14 +51,14 @@ namespace Proyecto1._1.Controllers
         }
 
         [Authorize]
-        public ActionResult editUnidadDeAprendizaje(int id)
+        public ActionResult editUnidadDeAprendizaje(unidadDeAprendizaje_Model uape)
         {
-            var uap = _context.unidadDeAprendizaje.FirstOrDefault(c => c.id == id);
+            var uap = _context.unidadDeAprendizaje.FirstOrDefault(c => c.id == uape.id);
             if (uap == null)
                 return HttpNotFound();
-            unidadDeAprendizaje_Model unap = new unidadDeAprendizaje_Model();
-            unap.nombre = uap.nombre;
-            unap.idMateria = uap.idMateria;
+            uap.nombre = uape.nombre;
+            uap.idMateria = uape.idMateria;
+            _context.SaveChanges();
             return View("New", "UnidadDeAprendizaje");
         }
 
@@ -70,6 +70,7 @@ namespace Proyecto1._1.Controllers
             {
                 _context.unidadDeAprendizaje.Remove(uap);
             }
+            _context.SaveChanges();
             return View("Index", "UnidadDeAprendizaje");
         }
 

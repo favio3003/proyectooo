@@ -1,5 +1,5 @@
 ﻿@model Proyecto1._1.Models.Estudiante_Model
-@using (Html.BeginForm("CreateEstudiante", "Estudiante"))
+@using (Html.BeginForm("createEstudiante", "Estudiante"))
 {
 <div class="form-group">
     <div class="form-group">
@@ -15,6 +15,12 @@
 
     </div>
     <div class="form-group">
+        @Html.LabelFor(c => c.ci, new { @class = "col-md-2 control-label" })
+
+        @Html.TextBoxFor(c => c.ci, new { @class = "form-control" })
+
+    </div>
+    <div class="form-group">
         @Html.LabelFor(c => c.sexo, new { @class = "col-md-2 control-label" })
 
         @Html.TextBoxFor(c => c.sexo, new { @class = "form-control" })
@@ -25,7 +31,12 @@
 
         @Html.TextBoxFor(c => c.fechadenacimiento, new { @class = "form-control datepicker", Value = DateTime.Now.ToShortDateString(), @type = "date" })
     </div>
-    <button class="btn btn-sm">hhh</button>
+   
+
+    <div class="alinearCentro">
+        <button class="btn btn-primary">Registrar</button>
+    </div>
+
 </div>
 }
 

@@ -1,4 +1,5 @@
-﻿using Proyecto1._1.Models;
+﻿using Microsoft.AspNet.Identity;
+using Proyecto1._1.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -40,20 +41,26 @@ namespace Proyecto1._1.Controllers
         [Authorize]
         public ActionResult createSolicitud(Solicitud_Model sol)
         {
+            string a = User.Identity.GetUserId();
+            var e = _context.Estudiante.SingleOrDefault(c => c.Registerid == a);
+            if (e == null)
+                return HttpNotFound();
+            sol.estudiante = e;
+            e.telefono = sol.telefono;
             _context.solicitud.Add(sol);
             _context.SaveChanges();
-            return RedirectToAction("Index", "Solicitud");
+            return RedirectToAction("Index", "Estudiante");
         }
 
         [Authorize]
-        public ActionResult editSolicitud(int id)
+        public ActionResult editSolicitud(Solicitud_Model solicitud)
         {
-            var sol = _context.solicitud.FirstOrDefault(c => c.id == id);
+            var sol = _context.solicitud.FirstOrDefault(c => c.id == solicitud.id);
             if (sol == null)
                 return HttpNotFound();
-            Solicitud_Model s = new Solicitud_Model();
-            s.descripcion = sol.descripcion;
-            s.estudiante = sol.estudiante;
+            sol.descripcion = solicitud.descripcion;
+            sol.estudiante = solicitud.estudiante;
+            _context.SaveChanges();
             return View("New", "Solicitud");
         }
 
@@ -65,6 +72,7 @@ namespace Proyecto1._1.Controllers
             {
                 _context.solicitud.Remove(sol);
             }
+            _context.SaveChanges();
             return View("Index", "Solicitud");
         }
 

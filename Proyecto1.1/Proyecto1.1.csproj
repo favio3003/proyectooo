@@ -255,6 +255,18 @@
     <Compile Include="Migrations\201806071432481_loquesea2.3.Designer.cs">
       <DependentUpon>201806071432481_loquesea2.3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806112006251_addCorreroElectronico.cs" />
+    <Compile Include="Migrations\201806112006251_addCorreroElectronico.Designer.cs">
+      <DependentUpon>201806112006251_addCorreroElectronico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806112049104_loquesea1.cs" />
+    <Compile Include="Migrations\201806112049104_loquesea1.Designer.cs">
+      <DependentUpon>201806112049104_loquesea1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806112325584_actualizado.cs" />
+    <Compile Include="Migrations\201806112325584_actualizado.Designer.cs">
+      <DependentUpon>201806112325584_actualizado.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Area_Model.cs" />
@@ -329,12 +341,13 @@
     <Content Include="Views\Estudiante\Index.cshtml" />
     <Content Include="Views\Estudiante\New.cshtml" />
     <Content Include="Views\Home\Condiciones.cshtml" />
-    <Content Include="Views\Estudiante\Materia_Area.cshtml" />
-    <Content Include="Views\Estudiante\EstudianteView.cshtml" />
     <Content Include="Views\area\Index.cshtml" />
     <Content Include="Views\area\NuevaArea.cshtml" />
     <Content Include="Views\Materia\Index.cshtml" />
     <Content Include="Views\Materia\NuevaMateria.cshtml" />
+    <Content Include="Views\Estudiante\Inicio.cshtml" />
+    <Content Include="Views\Estudiante\_PartialMateriaDefault.cshtml" />
+    <Content Include="Views\Estudiante\_PartialPasante.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -383,6 +396,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806071432481_loquesea2.3.resx">
       <DependentUpon>201806071432481_loquesea2.3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806112006251_addCorreroElectronico.resx">
+      <DependentUpon>201806112006251_addCorreroElectronico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806112049104_loquesea1.resx">
+      <DependentUpon>201806112049104_loquesea1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806112325584_actualizado.resx">
+      <DependentUpon>201806112325584_actualizado.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

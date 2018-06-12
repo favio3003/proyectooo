@@ -10,5 +10,6 @@ namespace Proyecto1._1.Models
         public int id { get; set; }
         public string nombre { get; set; }
         public Area_Model areaModel { get; set; }
+
     }
 }
