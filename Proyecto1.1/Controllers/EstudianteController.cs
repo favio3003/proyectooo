@@ -28,6 +28,7 @@ namespace Proyecto1._1.Controllers
             var Estudiante = _context.Estudiante.ToList();
             return View(Estudiante);
         }
+
         public ActionResult Index()
         {
             return View();

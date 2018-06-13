@@ -1,0 +1,38 @@
+﻿@model IQueryable<Proyecto1._1.Models.Estudiante_Model>
+
+<h2>Perfil del pasante</h2>
+
+@foreach(var estudiante in Model)
+{
+    <table>
+        <tr>
+            <td rowspan="3">
+                <img src="@Url.Content("~/Content/Image/icon.png")" width="80px" height="100px" alt="imgf" />
+            </td>
+            <td>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Nombre: @estudiante.nombre</td>
+                        </tr>
+                        <tr>
+                            <td>Apellido Paterno/Materno: @estudiante.apellido</td>
+                        </tr>
+                        <tr>
+                            <td>Fecha de nacimiento: @estudiante.fechadenacimiento</td>
+                        </tr>
+                        <tr>
+                            <td>Telefono: @estudiante.telefono</td>
+                        </tr>
+                        <tr>
+                            <td>Sexo: @estudiante.sexo</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+    }

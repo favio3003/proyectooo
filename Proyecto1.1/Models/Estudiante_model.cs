@@ -26,7 +26,7 @@ namespace Proyecto1._1.Models
         [Display(Name = "Sexo")]
         public string sexo { get; set; }
         public bool esayudante { get; set; }
-        public ICollection<Area_Model> Area { get; set; }
+        public ICollection<Materia_Model> Materia { get; set; }
         public string Registerid { get; set; }
     }
 }

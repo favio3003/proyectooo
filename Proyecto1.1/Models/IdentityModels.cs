@@ -23,7 +23,7 @@ namespace Proyecto1._1.Models
         public DbSet<Estudiante_Model> Estudiante { get; set; }
         public DbSet<Area_Model> Area { get; set; }
         public DbSet<Materia_Model> Materia { get; set; }
-        public DbSet<estudianteArea_Model>EstudiateArea { get; set; }
+        public DbSet<estudianteMateria_Model>EstudiateMateria { get; set; }
    
 
         public DbSet<unidadDeAprendizaje_Model> unidadDeAprendizaje { get; set; }
