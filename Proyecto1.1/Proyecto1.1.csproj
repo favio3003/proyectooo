@@ -279,13 +279,29 @@
     <Compile Include="Migrations\201806122227257_Mecago.Designer.cs">
       <DependentUpon>201806122227257_Mecago.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806131806479_problemsAlreadyFixed.cs" />
+    <Compile Include="Migrations\201806131806479_problemsAlreadyFixed.Designer.cs">
+      <DependentUpon>201806131806479_problemsAlreadyFixed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806131855135_deleteEstudianteMateria.cs" />
+    <Compile Include="Migrations\201806131855135_deleteEstudianteMateria.Designer.cs">
+      <DependentUpon>201806131855135_deleteEstudianteMateria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806132057231_ultimalaverga.cs" />
+    <Compile Include="Migrations\201806132057231_ultimalaverga.Designer.cs">
+      <DependentUpon>201806132057231_ultimalaverga.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806132112140_ultimalaverga2.cs" />
+    <Compile Include="Migrations\201806132112140_ultimalaverga2.Designer.cs">
+      <DependentUpon>201806132112140_ultimalaverga2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Area_Model.cs" />
-    <Compile Include="Models\estudianteArea_Model.cs" />
     <Compile Include="Models\Estudiante_Model.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\MateriaEstudiante.cs" />
     <Compile Include="Models\Materia_Model.cs" />
     <Compile Include="Models\Solicitud_Model.cs" />
     <Compile Include="Models\unidadDeAprendizaje_Model.cs" />
@@ -363,9 +379,14 @@
     <Content Include="Views\Estudiante\Area_vistaPartial.cshtml" />
     <Content Include="Views\area\Inicio.cshtml" />
     <Content Include="Views\Estudiante\Pasantes.cshtml" />
+    <Content Include="Views\Home\ListaPasantes.cshtml" />
+    <Content Include="Views\Home\perfilPasante.cshtml" />
+    <Content Include="Views\Estudiante\pasantesMateria.cshtml" />
+    <Content Include="Views\Estudiante\Materia.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\Image\" />
     <Folder Include="Views\Solicitud\" />
     <Folder Include="Views\UnidadDeAprendizaje\" />
   </ItemGroup>
@@ -427,6 +448,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806122227257_Mecago.resx">
       <DependentUpon>201806122227257_Mecago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806131806479_problemsAlreadyFixed.resx">
+      <DependentUpon>201806131806479_problemsAlreadyFixed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806131855135_deleteEstudianteMateria.resx">
+      <DependentUpon>201806131855135_deleteEstudianteMateria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806132057231_ultimalaverga.resx">
+      <DependentUpon>201806132057231_ultimalaverga.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806132112140_ultimalaverga2.resx">
+      <DependentUpon>201806132112140_ultimalaverga2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

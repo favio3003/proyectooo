@@ -32,9 +32,24 @@ namespace Proyecto1._1.Controllers
             var Area = _context.Area.ToList();
             return View(Area);
         }
+        public ActionResult Materia(int id)
+        {
+            var Materia = from m in _context.Materia
+                          where m.areaModel.id == id
+                          select m;
+            return View(Materia);
+        }
         public ActionResult Pasantes()
         {
             return View();
+        }
+
+        public ActionResult pasantesMateria(int id)
+        {
+            var pasante = from PerfilPasante in _context.materiaEstudiantes
+                          where PerfilPasante.Materia_Model.id == id
+                          select PerfilPasante.Estudiante_Model;
+            return View(pasante);
         }
         public ActionResult Inicio()
         {
@@ -74,6 +89,7 @@ namespace Proyecto1._1.Controllers
             estudianteDb.apellido = estudiante.apellido;
             estudianteDb.fechadenacimiento = estudiante.fechadenacimiento;
             estudianteDb.telefono = estudiante.telefono;
+            estudianteDb.comentario = estudiante.comentario;
             estudianteDb.sexo = estudiante.sexo;
             _context.SaveChanges();
             return View("New", "Estudiante");

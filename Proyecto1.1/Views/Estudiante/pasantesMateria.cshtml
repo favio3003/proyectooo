@@ -1,0 +1,40 @@
+﻿@model IQueryable<Proyecto1._1.Models.Estudiante_Model>
+@{
+    ViewBag.Title = "pasantesMateria";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Listado de pasantes</h2>
+
+<div class="list-group">
+    @foreach (var estudianteMateria in Model)
+    {
+        <button type="button" class="list-group-item list-group-item-action iftive">
+            <table>
+                <tr>
+                    <td rowspan="3">
+                        <img src="@Url.Content("~/Content/Image/icon.png")" width="80px" height="100px" alt="imgf" />
+                    </td>
+                    <td>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        @Html.ActionLink(estudianteMateria.apellido, "perfilPasante", "Home", new { id = estudianteMateria.id }, null)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        @estudianteMateria.nombre
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </button>
+        <br />
+    }
+
+</div>

@@ -1,0 +1,22 @@
+﻿@model IQueryable<Proyecto1._1.Models.Materia_Model>
+@{
+    ViewBag.Title = "materia";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>materia</h2>
+
+
+
+@foreach (var materia in Model)
+{
+    
+    <table class="table table-bordered table-hover">
+        <tbody>
+            <tr>
+                <td>@Html.ActionLink(materia.nombre, "pasantesMateria", "Estudiante", new { id = materia.id }, null)</td>
+            </tr>
+        </tbody>
+    </table>
+
+}
