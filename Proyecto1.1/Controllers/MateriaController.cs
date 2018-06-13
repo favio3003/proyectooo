@@ -58,7 +58,7 @@ namespace Proyecto1._1.Controllers
                 return HttpNotFound();
             mat.nombre = m.nombre;
             _context.SaveChanges();
-            return View("New", "Materia");
+            return RedirectToAction("Index", "Materia");
         }
 
         [Authorize]
@@ -70,7 +70,7 @@ namespace Proyecto1._1.Controllers
                 _context.Materia.Remove(mat);
             }
             _context.SaveChanges();
-            return View("Index", "Materia");
+            return RedirectToAction("Index", "Materia");
         }
 
     }

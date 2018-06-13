@@ -1,4 +1,5 @@
-﻿using Proyecto1._1.Models;
+﻿using Microsoft.AspNet.Identity;
+using Proyecto1._1.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -59,6 +60,20 @@ namespace Proyecto1._1.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
+        }
+
+        public ActionResult Comentario()
+        {
+            return View();
+        }
+
+        public ActionResult AgregarComentario(Comentario_Model comentario_Model)
+        {
+            var correo = User.Identity.GetUserId();
+            var estudiante = _context.comentario.SingleOrDefault(c => c.estudiante.Registerid == correo);
+            _context.comentario.Add(comentario_Model);
+            _context.SaveChanges();
+            return RedirectToAction("perdilPasante", "Home");
         }
     }
 }
