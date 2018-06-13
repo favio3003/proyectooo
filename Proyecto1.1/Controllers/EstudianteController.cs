@@ -27,7 +27,6 @@ namespace Proyecto1._1.Controllers
         {
             return View();
         }
-       
         public ActionResult Index()
         {
             var Area = _context.Area.ToList();
