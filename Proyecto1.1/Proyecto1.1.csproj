@@ -210,7 +210,6 @@
     <Compile Include="Controllers\API\SolicitudController.cs" />
     <Compile Include="Controllers\API\unidaddeaprendizajeController.cs" />
     <Compile Include="Controllers\AreaController.cs" />
-    <Compile Include="Controllers\estudianteMateriaController.cs" />
     <Compile Include="Controllers\EstudianteController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -276,18 +275,14 @@
     <Compile Include="Migrations\201806122116195_toStringSexo.Designer.cs">
       <DependentUpon>201806122116195_toStringSexo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201806131641042_addComentarioInEstudianteArea.cs" />
-    <Compile Include="Migrations\201806131641042_addComentarioInEstudianteArea.Designer.cs">
-      <DependentUpon>201806131641042_addComentarioInEstudianteArea.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201806131717376_cambiosEnTablas.cs" />
-    <Compile Include="Migrations\201806131717376_cambiosEnTablas.Designer.cs">
-      <DependentUpon>201806131717376_cambiosEnTablas.cs</DependentUpon>
+    <Compile Include="Migrations\201806122227257_Mecago.cs" />
+    <Compile Include="Migrations\201806122227257_Mecago.Designer.cs">
+      <DependentUpon>201806122227257_Mecago.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Area_Model.cs" />
-    <Compile Include="Models\estudianteMateria_Model.cs" />
+    <Compile Include="Models\estudianteArea_Model.cs" />
     <Compile Include="Models\Estudiante_Model.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -366,13 +361,11 @@
     <Content Include="Views\Estudiante\_PartialPasante.cshtml" />
     <Content Include="Views\Materia\ListaView.cshtml" />
     <Content Include="Views\Estudiante\Area_vistaPartial.cshtml" />
-    <Content Include="Views\Home\ListaPasantes.cshtml" />
-    <Content Include="Views\Home\perfilPasante.cshtml" />
+    <Content Include="Views\area\Inicio.cshtml" />
+    <Content Include="Views\Estudiante\Pasantes.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\Image\" />
-    <Folder Include="Views\estudianteArea\" />
     <Folder Include="Views\Solicitud\" />
     <Folder Include="Views\UnidadDeAprendizaje\" />
   </ItemGroup>
@@ -432,11 +425,8 @@
     <EmbeddedResource Include="Migrations\201806122116195_toStringSexo.resx">
       <DependentUpon>201806122116195_toStringSexo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201806131641042_addComentarioInEstudianteArea.resx">
-      <DependentUpon>201806131641042_addComentarioInEstudianteArea.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201806131717376_cambiosEnTablas.resx">
-      <DependentUpon>201806131717376_cambiosEnTablas.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201806122227257_Mecago.resx">
+      <DependentUpon>201806122227257_Mecago.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

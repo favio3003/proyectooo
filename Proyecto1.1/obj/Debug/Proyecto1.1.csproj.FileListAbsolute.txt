@@ -422,5 +422,6 @@ C:\Users\JOEL\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Mig
 C:\Users\JOEL\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1.1.csproj.CopyComplete
 C:\Users\JOEL\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Migrations.UpdateDatos.resources
 C:\Users\JOEL\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Migrations.toStringSexo.resources
-C:\Users\JOEL\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Migrations.addComentarioInEstudianteArea.resources
-C:\Users\JOEL\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Migrations.cambiosEnTablas.resources
+C:\Users\Favio\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Migrations.UpdateDatos.resources
+C:\Users\Favio\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Migrations.toStringSexo.resources
+C:\Users\Favio\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Migrations.Mecago.resources

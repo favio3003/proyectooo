@@ -1,11 +1,14 @@
-﻿
-@{
-             
+﻿@model IEnumerable<Proyecto1._1.Models.Area_Model>
 
-                ViewBag.Title = "Index";
-                Layout = "~/Views/Shared/_Layout.cshtml";
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Agregar Area</h2>
 @Html.Partial("NuevaArea")
+@Html.Partial("Inicio")
+
+
+
 

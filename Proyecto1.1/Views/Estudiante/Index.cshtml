@@ -6,42 +6,33 @@
 <h2>Estudiante</h2>
 <div class="row">
     <div class="col-md-8">
+       
         @Html.Partial("Area_vistaPartial")
 
     </div>
     <div class="col-md-3">
         <div class="tab-content">
 
-            <h3>Desea Ser Pasante?</h3> <br />
-            <p>
-                <h5>
-                    para poder Ser
-                    <button type="button" class="btn btn-link" data-toggle="modal" data-target=".Pasante">Pasante</button>
-                    para poder Tener acceso
-                </h5>
-                <div class="modal fade Pasante" tabindex="-1" role="dialog">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                <h4 class="modal-title">Pasante</h4>
-                            </div>
-                            <div class="modal-body">
-                                @Html.Partial("_PartialPasante")
-                            </div>
-                            <div class="modal-header">
-                                <h6>Al registrate Pasaras a una lista de espera en el cual los administradores veran si eres apto para dar clases </h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </p>
 
 
         </div>
+        @using (Html.BeginForm("Pasante", "Estudiante"))
+    {
+        <h3>Desea Ser Pasante?</h3> <br />
+      
+            <h5>
+                para poder Ser
+                <a>@Html.ActionLink("Pasante", "Pasantes", "Estudiante")</a>
+               
+            </h5>
+            }
+         
+
+
     </div>
-    </div>
+                     
+        </div>
+ 
 
 
 
