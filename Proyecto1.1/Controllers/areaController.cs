@@ -21,15 +21,16 @@ namespace Proyecto1._1.Controllers
         {
             _context.Dispose();
         }
-        public ActionResult Lista()
+        public ActionResult Inicio()
+        {
+            return View();
+        }
+
+        public ActionResult Area_vistaPartial()
         {
             var Area = _context.Area.ToList();
             return View(Area);
-        }
-
-        public ActionResult Index()
-        {
-            return View();
+           
         }
 
         public ActionResult Details(int Id)

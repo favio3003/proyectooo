@@ -275,6 +275,10 @@
     <Compile Include="Migrations\201806122116195_toStringSexo.Designer.cs">
       <DependentUpon>201806122116195_toStringSexo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806122227257_Mecago.cs" />
+    <Compile Include="Migrations\201806122227257_Mecago.Designer.cs">
+      <DependentUpon>201806122227257_Mecago.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Area_Model.cs" />
@@ -357,6 +361,8 @@
     <Content Include="Views\Estudiante\_PartialPasante.cshtml" />
     <Content Include="Views\Materia\ListaView.cshtml" />
     <Content Include="Views\Estudiante\Area_vistaPartial.cshtml" />
+    <Content Include="Views\area\Inicio.cshtml" />
+    <Content Include="Views\Estudiante\Pasantes.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -418,6 +424,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806122116195_toStringSexo.resx">
       <DependentUpon>201806122116195_toStringSexo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806122227257_Mecago.resx">
+      <DependentUpon>201806122227257_Mecago.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

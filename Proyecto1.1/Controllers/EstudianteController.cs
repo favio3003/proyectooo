@@ -25,10 +25,15 @@ namespace Proyecto1._1.Controllers
 
         public ActionResult Lista()
         {
-            var Estudiante = _context.Estudiante.ToList();
-            return View(Estudiante);
+            return View();
         }
+       
         public ActionResult Index()
+        {
+            var Area = _context.Area.ToList();
+            return View(Area);
+        }
+        public ActionResult Pasantes()
         {
             return View();
         }
