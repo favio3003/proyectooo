@@ -27,11 +27,13 @@ namespace Proyecto1._1.Controllers
         {
             return View();
         }
+        //[Authorize]
         public ActionResult Index()
         {
             var Area = _context.Area.ToList();
             return View(Area);
         }
+       // [Authorize]
         public ActionResult Materia(int id)
         {
             var Materia = from m in _context.Materia

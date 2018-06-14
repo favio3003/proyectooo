@@ -210,6 +210,7 @@
     <Compile Include="Controllers\API\SolicitudController.cs" />
     <Compile Include="Controllers\API\unidaddeaprendizajeController.cs" />
     <Compile Include="Controllers\AreaController.cs" />
+    <Compile Include="Controllers\ComentarioController.cs" />
     <Compile Include="Controllers\EstudianteController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -295,10 +296,15 @@
     <Compile Include="Migrations\201806132112140_ultimalaverga2.Designer.cs">
       <DependentUpon>201806132112140_ultimalaverga2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806141222341_l.cs" />
+    <Compile Include="Migrations\201806141222341_l.Designer.cs">
+      <DependentUpon>201806141222341_l.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Area_Model.cs" />
     <Compile Include="Models\Comentario_Model.cs" />
+    <Compile Include="Models\EstudianteComentarioView.cs" />
     <Compile Include="Models\Estudiante_Model.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -390,6 +396,8 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\Image\" />
+    <Folder Include="Views\Comentario\" />
+    <Folder Include="Views\estudianteComentario\" />
     <Folder Include="Views\Solicitud\" />
     <Folder Include="Views\UnidadDeAprendizaje\" />
   </ItemGroup>
@@ -463,6 +471,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806132112140_ultimalaverga2.resx">
       <DependentUpon>201806132112140_ultimalaverga2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806141222341_l.resx">
+      <DependentUpon>201806141222341_l.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
