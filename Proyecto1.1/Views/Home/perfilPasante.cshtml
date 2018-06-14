@@ -4,39 +4,58 @@
 
 @foreach (var estudiante in Model)
 {
-    <table>
-        <tr>
-            <td rowspan="3">
-                <img src="@Url.Content("~/Content/Image/icon.png")" width="80px" height="100px" alt="imgf" />
-            </td>
-            <td>
-                <table>
-                    <tbody>
-                        <tr>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>Nombre: @estudiante.nombre</td>
-                        </tr>
-                        <tr>
-                            <td>Apellido Paterno/Materno: @estudiante.apellido</td>
-                        </tr>
-                        <tr>
-                            <td>Fecha de nacimiento: @estudiante.fechadenacimiento</td>
-                        </tr>
-                        <tr>
-                            <td>Telefono: @estudiante.telefono</td>
-                        </tr>
-                        <tr>
-                            <td>Sexo: @estudiante.sexo</td>
-                        </tr>
-                    </tbody>
-                </table>
+<table>
+    <tr>
+        <td rowspan="3">
+            <img src="@Url.Content("~/Content/Image/icon.png")" width="80px" height="100px" alt="imgf" />
+        </td>
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Nombre: @estudiante.nombre</td>
+                    </tr>
+                    <tr>
+                        <td>Apellido Paterno/Materno: @estudiante.apellido</td>
+                    </tr>
+                    <tr>
+                        <td>Fecha de nacimiento: @estudiante.fechadenacimiento</td>
+                    </tr>
+                    <tr>
+                        <td>Telefono: @estudiante.telefono</td>
+                    </tr>
+                    <tr>
+                        <td>Sexo: @estudiante.sexo</td>
+                    </tr>
+                </tbody>
+            </table>
 
-            </td>
+        </td>
 
-        </tr>
-    </table>
+    </tr>
+    <tr>
+        <td>
+            Comentario:
+        </td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>
+            @Html.TextArea("comentario")
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            <button class="btn btn-outline-success">Enviar</button>
+        </td>
+        <td></td>
+    </tr>
+</table>
     <a>@Html.ActionLink("Comentario", "Comentario", "Home")</a>
 
 }
