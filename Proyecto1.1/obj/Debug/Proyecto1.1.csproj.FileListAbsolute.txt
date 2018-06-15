@@ -435,3 +435,4 @@ C:\Users\JOEL\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Mig
 C:\Users\JOEL\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Migrations.sadl.resources
 C:\Users\JOEL\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Migrations.sad3.resources
 C:\Users\JOEL\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Migrations.sad4.resources
+C:\Users\JOEL\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Migrations.migration.resources

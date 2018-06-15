@@ -25,14 +25,14 @@ namespace Proyecto1._1.Controllers
         {
             return View();
         }
-
+        [Authorize]
         public ActionResult Area_vistaPartial()
         {
             var Area = _context.Area.ToList();
             return View(Area);
            
         }
-
+        [Authorize]
         public ActionResult Details(int Id)
         {
             var area = _context.Area.SingleOrDefault(c => c.id == Id);

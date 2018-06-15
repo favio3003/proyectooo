@@ -10,6 +10,7 @@ namespace Proyecto1._1.Controllers
 {
     public class ComentarioController : Controller
     {
+        [Authorize]
         // GET: estudianteComentario
         public ActionResult Index()
         {
@@ -27,12 +28,12 @@ namespace Proyecto1._1.Controllers
         {
             _context.Dispose();
         }
-
+        [Authorize]
         public ActionResult createComentario(Comentario_Model comentario)
         {
-            var estudiante = User.Identity.GetUserId();
-            var estudiante2 = _context.Estudiante.SingleOrDefault(c => c.Registerid == estudiante);
-            comentario.estudiante = estudiante2;
+            //var estudiante = User.Identity.GetUserId();
+            //var estudiante2 = _context.Estudiante.SingleOrDefault(c => c.Registerid == estudiante);
+            //comentario.estudiante = estudiante2;
             _context.comentario.Add(comentario);
             _context.SaveChanges();
             return RedirectToAction("perfilPasante", "Home");
