@@ -560,3 +560,13 @@ C:\Users\Favio\Desktop\proyectooo\Proyecto1.1\obj\Debug\Proyecto1.1.csproj.Gener
 C:\Users\Favio\Desktop\proyectooo\Proyecto1.1\obj\Debug\Proyecto1.1.csproj.CoreCompileInputs.cache
 C:\Users\Favio\Desktop\proyectooo\Proyecto1.1\obj\Debug\Proyecto1.1.dll
 C:\Users\Favio\Desktop\proyectooo\Proyecto1.1\obj\Debug\Proyecto1.1.pdb
+C:\Users\Favio\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Migrations.problemsAlreadyFixed.resources
+C:\Users\Favio\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Migrations.deleteEstudianteMateria.resources
+C:\Users\Favio\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Migrations.ultimalaverga.resources
+C:\Users\Favio\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Migrations.ultimalaverga2.resources
+C:\Users\Favio\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Migrations.l.resources
+C:\Users\Favio\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Migrations.alv3435.resources
+C:\Users\Favio\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Migrations.sadl.resources
+C:\Users\Favio\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Migrations.sad3.resources
+C:\Users\Favio\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Migrations.sad4.resources
+C:\Users\Favio\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Migrations.migration.resources
