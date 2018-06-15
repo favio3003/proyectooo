@@ -3,11 +3,18 @@
 {
 <div class="form-group">
     <div class="form-group">
+        <h5 style="color:white">
+            principalmente tiene que escoger o seleccionar una materia con una unidad de aprendizaje que usted desee para poder ser movido a la area correspondiente, tiene que describir como sera su servicio si es que tendra algun valor adicional o no, para ser implememtado a su perfil y describir que dias con que horas con exactitud podra dar las clases luego contactarse con cualquieras
+
+
+            de los   @Html.ActionLink("Administradores", "Contact", "Home") para poder ser evaluados
+        </h5>
         @Html.LabelFor(c => c.descripcion, new { @class = "col-md-2 control-label", @style = "color:white" })
 
         @Html.TextAreaFor(c => c.descripcion, new { @class = "form-control" })
-        @Html.ValidationMessageFor(c=>c.descripcion)
-
+        <div style="color:red">
+            @Html.ValidationMessageFor(c => c.descripcion)
+        </div>
     </div>
 
     

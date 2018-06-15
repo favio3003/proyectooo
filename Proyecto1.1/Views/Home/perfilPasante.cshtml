@@ -1,6 +1,6 @@
 ﻿@model IQueryable<Proyecto1._1.Models.Estudiante_Model>
 
-<h2>Perfil del pasante</h2>
+<h2 style="color:white">Perfil del pasante</h2>
 
 @foreach (var estudiante in Model)
 {
@@ -16,19 +16,19 @@
                         <td></td>
                     </tr>
                     <tr>
-                        <td>Nombre: @estudiante.nombre</td>
+                        <td style="color:white">Nombre: @estudiante.nombre</td>
                     </tr>
                     <tr>
-                        <td>Apellido Paterno/Materno: @estudiante.apellido</td>
+                        <td style="color:white">Apellido Paterno/Materno: @estudiante.apellido</td>
                     </tr>
                     <tr>
-                        <td>Fecha de nacimiento: @estudiante.fechadenacimiento</td>
+                        <td style="color:white">Fecha de nacimiento: @estudiante.fechadenacimiento</td>
                     </tr>
                     <tr>
-                        <td>Telefono: @estudiante.telefono</td>
+                        <td style="color:white">Telefono: @estudiante.telefono</td>
                     </tr>
                     <tr>
-                        <td>Sexo: @estudiante.sexo</td>
+                        <td style="color:white">Sexo: @estudiante.sexo</td>
                     </tr>
                 </tbody>
             </table>
@@ -38,24 +38,11 @@
     </tr>
     <tr>
         <td>
-            Comentario:
+        
         </td>
         <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>
-            @Html.TextArea("comentario")
-        </td>
-    </tr>
-    <tr>
-        <td></td>
-        <td>
-            <button class="btn btn-outline-success">Enviar</button>
-        </td>
         <td></td>
     </tr>
 </table>
-    <a>@Html.ActionLink("Comentario", "Comentario", "Home")</a>
 
 }

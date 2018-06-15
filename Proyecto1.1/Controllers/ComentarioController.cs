@@ -36,7 +36,7 @@ namespace Proyecto1._1.Controllers
             //comentario.estudiante = estudiante2;
             _context.comentario.Add(comentario);
             _context.SaveChanges();
-            return RedirectToAction("perfilPasante", "Home");
+            return RedirectToAction("dejarComentario", "Home");
             // return View("Index");
         }
 

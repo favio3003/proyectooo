@@ -27,38 +27,56 @@
         <div class="navbar navbar-inverse navbar-static-top">
             <div class="navbar-inverse navbarcolor">
 
-                <div class="container-nav">
-                    <div class="navbar-header">
+                <div class="container-nav">                 
 
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
+                 
+                    <div class="container">
+                        <div class="navbar-header">
+                            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            @Html.ActionLink(" ", "Index", "Home", new { area = "" }, new { @class = "navbar-brand glyphicon glyphicon-home", })
+                        </div>
+                        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+                            <ul class="nav navbar-nav">
+                                <li>
+                                    <a @Html.ActionLink("Que materia desea pasar?", "Index", "Estudiante") </a>
+                                </li>
+                                <li>
 
-                        @Html.ActionLink(" ", "Index", "Home", new { area = "" }, new { @class = "navbar-brand glyphicon glyphicon-home", })
-                    </div>
-                    <div id="navbar" class="navbar-collapse collapse">
-                        <ul class="nav navbar-nav"></ul>
-                        @Html.Partial("_LoginPartial")
-                        <ul class="nav navbar-nav menuDropdown">
-                            <li id="liAdm" class="dropdown seguridadnomin">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Administrador <span class="	glyphicon glyphicon-align-left"></span></a>
-                                <ul class="dropdown-menu submenu">
-                                    <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
-                                    <li class="divider"></li>
-                                    <li> @Html.ActionLink("Que materia desea pasar?", "Index", "Estudiante")</li>
-                                    <li> @Html.ActionLink("Dejar un comentario", "dejarComentario", "Home")</li>
-                                    <li class="divider"></li>
+                                </li>
+                                <li>
+                                    <a @Html.ActionLink("Dejar un comentario", "dejarComentario", "Home")</a>
+                                </li>
+                                <li>
 
-                                    <li>@Html.ActionLink("Acerca de", "About", "Home")</li>
-                                    <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
+                                </li>
+                                <li>
+                                    <a @Html.ActionLink("Acerca de", "About", "Home")</a>
+                                </li>
+                                <li>
 
-                                </ul>
-                            </li>
-                        </ul>
+                                </li>
+                                <li>
+                                    <a @Html.ActionLink("Contacto", "Contact", "Home")</a>
+                                </li>
+                            </ul>
+                            <div id="navbar" class="navbar-collapse collapse">
+                                <ul class="nav navbar-nav"></ul>
+                                @Html.Partial("_LoginPartial")
+                                <div class="navbar-right">
 
+
+                                </div>
+
+                                <ul class="nav navbar-nav menuDropdown"></ul>
+
+                            </div>
+                        </nav>
+                     
                     </div>
                 </div>
             </div>

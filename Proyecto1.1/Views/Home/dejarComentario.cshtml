@@ -4,15 +4,15 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h5>Comunidad</h5>
+<h2 style="color:white">Comunidad</h2>
 @foreach (var comentario in Model)
 {
     <table>
-        <tr>
-            <td>@comentario.comentario</td>
+        <tr>         
+            <td style="color:white">@comentario.comentario</td>
         </tr>
     </table>
     <br/>
 }
-<button>@Html.ActionLink("Dejar un comentario", "Comentario", "Home")</button>
+    <button style="background-color:black;color:black"><a style="color:white">@Html.ActionLink("Dejar un comentario", "Comentario", "Home")</a></button>
 

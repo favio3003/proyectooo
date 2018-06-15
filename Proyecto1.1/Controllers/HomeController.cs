@@ -76,7 +76,7 @@ namespace Proyecto1._1.Controllers
             }
             _context.comentario.Add(comentario_Model);
             _context.SaveChanges();
-            return RedirectToAction("perdilPasante", "Home");
+            return RedirectToAction("dejarComentario", "Home");
         }
 
         public ActionResult dejarComentario()
