@@ -3,8 +3,8 @@
     ViewBag.Title = "Registrarse";
 }
 
-<h2>@ViewBag.Title.</h2>
-<h4>Cree una cuenta nueva.</h4>
+<h2 style = "color:white">@ViewBag.Title.</h2>
+<h4 style = "color:white">Cree una cuenta nueva.</h4>
 <hr />
 <div class="row">
     <div class="col-md-6">
@@ -14,19 +14,19 @@
             @Html.AntiForgeryToken()
             @Html.ValidationSummary("", new { @class = "text-danger" })
             <div class="form-group">
-                @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
+                @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label", @style = "color:white" })
                 <div class="col-md-10">
                     @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
                 </div>
             </div>
             <div class="form-group">
-                @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
+                @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label", @style = "color:white" })
                 <div class="col-md-10">
                     @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
                 </div>
             </div>
             <div class="form-group">
-                @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-2 control-label" })
+                @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-2 control-label", @style = "color:white" })
                 <div class="col-md-10">
                     @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
                 </div>
@@ -39,9 +39,9 @@
         }
     </div>
     <div class="col-md-3">
-        <p>
+        <p style = "color:white">
             Al hacer clic en Siguiente, aceptara Todos nuestros
-            <a>@Html.ActionLink("Terminos y condiciones", "Condiciones", "Home")</a> ,Con nuestras Política de datos y la Política de cookies. Es posible que te enviemos notificaciones a la bandeja de tu correo.
+            <a style = "color:aqua">@Html.ActionLink("Terminos y condiciones", "Condiciones", "Home")</a> ,Con nuestras Política de datos y la Política de cookies. Es posible que te enviemos notificaciones a la bandeja de tu correo.
         </p>
     </div>
 </div>

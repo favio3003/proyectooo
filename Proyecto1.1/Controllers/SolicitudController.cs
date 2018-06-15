@@ -23,10 +23,7 @@ namespace Proyecto1._1.Controllers
             _context.Dispose();
         }
 
-        public ActionResult Index()
-        {
-            return View();
-        }
+ 
 
         public ActionResult Details(int Id)
         {
@@ -36,20 +33,6 @@ namespace Proyecto1._1.Controllers
                 return HttpNotFound();
 
             return View(sol);
-        }
-
-        [Authorize]
-        public ActionResult createSolicitud(Solicitud_Model sol)
-        {
-            string a = User.Identity.GetUserId();
-            var e = _context.Estudiante.SingleOrDefault(c => c.Registerid == a);
-            if (e == null)
-                return HttpNotFound();
-            sol.estudiante = e;
-            e.telefono = sol.telefono;
-            _context.solicitud.Add(sol);
-            _context.SaveChanges();
-            return RedirectToAction("Index", "Estudiante");
         }
 
         [Authorize]

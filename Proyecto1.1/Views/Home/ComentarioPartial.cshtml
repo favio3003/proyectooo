@@ -1,18 +1,19 @@
 ﻿@model Proyecto1._1.Models.Comentario_Model
-@using (Html.BeginForm("AgregarComentario", "Home"))
+@using (Html.BeginForm("Comentario", "Home"))
 {
     
     <div class="form-group">
         <div class="form-group">
-            @Html.LabelFor(c => c.comentario, new { @class = "col-md-2 control-label" })
+            @Html.LabelFor(c => c.comentario, new { @class = "col-md-2 control-label", @style = "color:black" })
 
             @Html.TextAreaFor(c => c.comentario, new { @class = "form-control" })
+            @Html.ValidationMessageFor(c=>c.comentario)
 
         </div>
 
 
         <div class="right">
-            <button class="btn btn-outline-success">Enviar</button>
+            <button class="btn btn-outline-success" style="background-color:#07423E; color:white"><span class="glyphicon glyphicon-send">Enviar</span></button>
         </div>
 
         </div>

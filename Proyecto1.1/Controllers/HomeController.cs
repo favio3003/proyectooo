@@ -67,13 +67,23 @@ namespace Proyecto1._1.Controllers
             return View();
         }
 
-        public ActionResult AgregarComentario(Comentario_Model comentario_Model)
+        [AcceptVerbs(HttpVerbs.Post)]
+        public ActionResult Comentario(Comentario_Model comentario_Model)
         {
-            var correo = User.Identity.GetUserId();
-            var estudiante = _context.comentario.SingleOrDefault(c => c.estudiante.Registerid == correo);
+            if(!ModelState.IsValid)
+            {
+                return View("Comentario", comentario_Model);
+            }
             _context.comentario.Add(comentario_Model);
             _context.SaveChanges();
             return RedirectToAction("perdilPasante", "Home");
+        }
+
+        public ActionResult dejarComentario()
+        {
+            var comentario = from comen in _context.comentario
+                             select comen;
+            return View(comentario);
         }
     }
 }

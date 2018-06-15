@@ -1,61 +1,69 @@
 ﻿@model Proyecto1._1.Models.Estudiante_Model
-@using (Html.BeginForm("createEstudiante", "Estudiante"))
+@Html.ValidationSummary(true)
+@using (Html.BeginForm("Inicio", "Estudiante"))
 {
-<div class="form-group">
+
     <div class="form-group">
-        @Html.LabelFor(c => c.nombre, new { @class = "col-md-2 control-label" })
+        <div class="form-group">
+            @Html.LabelFor(c => c.nombre, new { @class = "col-md-2 control-label", @style = "color:white" })
 
-        @Html.TextBoxFor(c => c.nombre, new { @class = "form-control" })
+            @Html.TextBoxFor(c => c.nombre, new { @class = "form-control" })
+            @Html.ValidationMessageFor(c => c.nombre)
+
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(c => c.apellido, new { @class = "col-md-2 control-label", @style = "color:white" })
+
+            @Html.TextBoxFor(c => c.apellido, new { @class = "form-control" })
+            @Html.ValidationMessageFor(c => c.apellido)
+
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(c => c.ci, new { @class = "col-md-2 control-label", @style = "color:white" })
+
+            @Html.TextBoxFor(c => c.ci, new { @class = "form-control" })
+            @Html.ValidationMessageFor(c => c.ci)
+
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(c => c.telefono, new { @class = "col-md-2 control-label", @style = "color:white" })
+
+            @Html.TextBoxFor(c => c.telefono, new { @class = "form-cntrol" })
+            @Html.ValidationMessageFor(c => c.telefono)
+
+        </div>
+        <div class="form-group">
+            @{
+                List<SelectListItem> sexos = new List<SelectListItem>();
+                sexos.Add(new SelectListItem
+                {
+                    Text = "Masculino",
+                    Value = "Masculino"
+                });
+                sexos.Add(new SelectListItem
+                {
+                    Text = "Femenino",
+                    Value = "Femenino"
+                });
+            }
+            @Html.LabelFor(c => c.sexo, new { @class = "col-md-2 control-label", @style = "color:white" })
+
+            @Html.DropDownListFor(model => model.sexo, sexos)
+            @Html.ValidationMessageFor(c => c.sexo)
+
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(c => c.fechadenacimiento, new { @class = "col-md-2 control-label", @style = "color:white" })
+
+            @Html.TextBoxFor(c => c.fechadenacimiento, new { @class = "form-control datepicker", Value = DateTime.Now.ToShortDateString(), @type = "date" })
+            @Html.ValidationMessageFor(c => c.fechadenacimiento)
+        </div>
+
+
+        <div class="alinearCentro">
+            <button class="btn btn-outline-success">Registrar</button>
+        </div>
 
     </div>
-    <div class="form-group">
-        @Html.LabelFor(c => c.apellido, new { @class = "col-md-2 control-label" })
-
-        @Html.TextBoxFor(c => c.apellido, new { @class = "form-control" })
-
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(c => c.ci, new { @class = "col-md-2 control-label" })
-
-        @Html.TextBoxFor(c => c.ci, new { @class = "form-control" })
-
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(c => c.telefono, new { @class = "col-md-2 control-label" })
-
-        @Html.TextBoxFor(c => c.telefono, new { @class = "form-cntrol"})
-
-    </div>
-    <div class="form-group">
-        @{
-            List<SelectListItem> sexos = new List<SelectListItem>();
-            sexos.Add(new SelectListItem
-            {
-                Text = "Masculino",
-                Value = "Masculino"
-            });
-            sexos.Add(new SelectListItem
-            {
-                Text = "Femenino",
-                Value ="Femenino"
-            });
-        }
-        @Html.LabelFor(c => c.sexo, new { @class = "col-md-2 control-label" })
-
-        @Html.DropDownListFor(model => model.sexo, sexos)
-
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(c => c.fechadenacimiento, new { @class = "col-md-2 control-label" })
-
-        @Html.TextBoxFor(c => c.fechadenacimiento, new { @class = "form-control datepicker", Value = DateTime.Now.ToShortDateString(), @type = "date" })
-    </div>
-   
-
-    <div class="alinearCentro">
-        <button class="btn btn-outline-success">Registrar</button>
-    </div>
-
-</div>
 }
 

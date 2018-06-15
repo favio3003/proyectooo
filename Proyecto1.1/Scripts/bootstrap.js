@@ -38,7 +38,31 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * ======================================================================== */
+<script>
+    $("#sendMessage").on("click", function(event){
+        event.preventDefault();
 
+    $.ajax({
+        url: "/controlador/Index",
+            data: {
+        Nombre: $("#Nombre").val(),
+    Correo: $("#Correo").val(),
+    Mensaje: $("#Mensaje").val()
+},
+type: "post",
+dataType: "json",
+            success: function(respuesta){
+        // Aquí lo que quieras que suceda si la petición es exitosa
+        // por ejemplo:
+        $("#successDialog").modal();
+    },
+            error:function(repuesta){
+        // Aquí lo que quieras que suceda si la petición tuvo un error
+        $("#errorDialog").modal();
+    }
+});
+});
+</script>
 
 +function ($) { "use strict";
 

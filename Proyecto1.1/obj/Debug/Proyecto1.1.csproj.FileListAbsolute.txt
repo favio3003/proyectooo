@@ -431,3 +431,7 @@ C:\Users\JOEL\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Mig
 C:\Users\JOEL\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Migrations.ultimalaverga.resources
 C:\Users\JOEL\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Migrations.ultimalaverga2.resources
 C:\Users\JOEL\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Migrations.l.resources
+C:\Users\JOEL\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Migrations.alv3435.resources
+C:\Users\JOEL\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Migrations.sadl.resources
+C:\Users\JOEL\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Migrations.sad3.resources
+C:\Users\JOEL\Documents\GitHub\proyectooo\Proyecto1.1\obj\Debug\Proyecto1._1.Migrations.sad4.resources

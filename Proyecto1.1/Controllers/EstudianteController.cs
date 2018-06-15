@@ -41,21 +41,13 @@ namespace Proyecto1._1.Controllers
                           select m;
             return View(Materia);
         }
-        public ActionResult Pasantes()
-        {
-            return View();
-        }
 
         public ActionResult pasantesMateria(int id)
         {
             var pasante = from PerfilPasante in _context.materiaEstudiantes
                           where PerfilPasante.Materia_Model.id == id
                           select PerfilPasante.Estudiante_Model;
-            return View(pasante);
-        }
-        public ActionResult Inicio()
-        {
-            return View();
+                return View(pasante);
         }
         public ActionResult Details(int Id)
         {
@@ -70,14 +62,46 @@ namespace Proyecto1._1.Controllers
         {
             return View();
         }
-        
-        public ActionResult createEstudiante(Estudiante_Model est)
+
+        public ActionResult Inicio()
         {
-            est.Registerid = User.Identity.GetUserId();
-            _context.Estudiante.Add(est);
+            return View();
+        }
+        public ActionResult Pasantes()
+        {
+            return View();
+        }
+
+        [Authorize]
+        [AcceptVerbs(HttpVerbs.Post)]
+        public ActionResult Pasantes(Solicitud_Model sol)
+        {
+            if(!ModelState.IsValid)
+            {
+                return View("Pasantes",sol);
+            }
+            string a = User.Identity.GetUserId();
+            var e = _context.Estudiante.SingleOrDefault(c => c.Registerid == a);
+            sol.estudiante = e;
+            _context.solicitud.Add(sol);
             _context.SaveChanges();
             return RedirectToAction("Index", "Estudiante");
-           // return View("Index");
+        }
+
+        [AcceptVerbs(HttpVerbs.Post)]
+        public ActionResult Inicio(Estudiante_Model est)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View("Inicio",est);
+            }
+            else
+            {
+                est.Registerid = User.Identity.GetUserId();
+                _context.Estudiante.Add(est);
+                _context.SaveChanges();
+                return RedirectToAction("Index", "Estudiante");
+            }
         }
 
         [Authorize]
@@ -91,7 +115,6 @@ namespace Proyecto1._1.Controllers
             estudianteDb.apellido = estudiante.apellido;
             estudianteDb.fechadenacimiento = estudiante.fechadenacimiento;
             estudianteDb.telefono = estudiante.telefono;
-            estudianteDb.comentario = estudiante.comentario;
             estudianteDb.sexo = estudiante.sexo;
             _context.SaveChanges();
             return View("New", "Estudiante");

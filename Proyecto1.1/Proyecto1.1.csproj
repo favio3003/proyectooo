@@ -300,6 +300,22 @@
     <Compile Include="Migrations\201806141222341_l.Designer.cs">
       <DependentUpon>201806141222341_l.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806150029015_alv3435.cs" />
+    <Compile Include="Migrations\201806150029015_alv3435.Designer.cs">
+      <DependentUpon>201806150029015_alv3435.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806150034057_sadl.cs" />
+    <Compile Include="Migrations\201806150034057_sadl.Designer.cs">
+      <DependentUpon>201806150034057_sadl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806150135100_sad3.cs" />
+    <Compile Include="Migrations\201806150135100_sad3.Designer.cs">
+      <DependentUpon>201806150135100_sad3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806150145454_sad4.cs" />
+    <Compile Include="Migrations\201806150145454_sad4.Designer.cs">
+      <DependentUpon>201806150145454_sad4.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Area_Model.cs" />
@@ -319,6 +335,8 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\toastr.css" />
+    <Content Include="Content\toastr.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -328,6 +346,8 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\toastr.scss" />
+    <Content Include="Content\toastr.less" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -339,6 +359,9 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\toastr.js" />
+    <Content Include="Scripts\toastr.min.js" />
+    <Content Include="Scripts\toastrlmp.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -392,11 +415,11 @@
     <Content Include="Views\Estudiante\Materia.cshtml" />
     <Content Include="Views\Home\ComentarioPartial.cshtml" />
     <Content Include="Views\Home\Comentario.cshtml" />
+    <Content Include="Views\Home\dejarComentario.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\Image\" />
-    <Folder Include="Views\Comentario\" />
     <Folder Include="Views\estudianteComentario\" />
     <Folder Include="Views\Solicitud\" />
     <Folder Include="Views\UnidadDeAprendizaje\" />
@@ -474,6 +497,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806141222341_l.resx">
       <DependentUpon>201806141222341_l.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806150029015_alv3435.resx">
+      <DependentUpon>201806150029015_alv3435.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806150034057_sadl.resx">
+      <DependentUpon>201806150034057_sadl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806150135100_sad3.resx">
+      <DependentUpon>201806150135100_sad3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806150145454_sad4.resx">
+      <DependentUpon>201806150145454_sad4.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

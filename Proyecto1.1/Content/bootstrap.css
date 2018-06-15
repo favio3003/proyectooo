@@ -35,6 +35,9 @@ section,
 summary {
   display: block;
 }
+a{
+    color:aqua;
+}
 
 audio,
 canvas,
@@ -335,7 +338,7 @@ textarea {
 }
 
 a {
-  color: #428bca;
+  color: turquoise;
   text-decoration: none;
 }
 
@@ -4567,7 +4570,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-inverse {
-    border-color: #080808
+    border-color: #064D0D!important;
 }
 
     .navbar-inverse .navbar-brand {

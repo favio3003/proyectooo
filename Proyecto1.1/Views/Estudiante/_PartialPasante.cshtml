@@ -1,17 +1,18 @@
 ﻿@model Proyecto1._1.Models.Solicitud_Model
-@using (Html.BeginForm("createSolicitud", "Solicitud"))
+@using (Html.BeginForm("Pasantes", "Estudiante"))
 {
 <div class="form-group">
     <div class="form-group">
-        @Html.LabelFor(c => c.descripcion, new { @class = "col-md-2 control-label" })
+        @Html.LabelFor(c => c.descripcion, new { @class = "col-md-2 control-label", @style = "color:white" })
 
         @Html.TextAreaFor(c => c.descripcion, new { @class = "form-control" })
+        @Html.ValidationMessageFor(c=>c.descripcion)
 
     </div>
 
     
     <div class="right">
-        <button class="btn btn-outline-success">Enviar</button>
+        <button class="btn btn-outline-success" style="background-color:#07423E; color:white"><span class="glyphicon glyphicon-send">  Enviar</span></button>
     </div>
 
 </div>

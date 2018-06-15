@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "dejarComentario";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h5>Comunidad</h5>
+@foreach (var comentario in Model)
+{
+    <table>
+        <tr>
+            <td>@comentario.comentario</td>
+        </tr>
+    </table>
+    <br/>
+}
+<button>@Html.ActionLink("Dejar un comentario", "Comentario", "Home")</button>
+

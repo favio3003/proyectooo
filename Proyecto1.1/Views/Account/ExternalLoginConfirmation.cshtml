@@ -2,8 +2,8 @@
 @{
     ViewBag.Title = "Registrarse";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>Asocie su cuenta @ViewBag.LoginProvider.</h3>
+<h2 style = "color:white" >@ViewBag.Title.</h2>
+<h3 style = "color:white" >Asocie su cuenta @ViewBag.LoginProvider.</h3>
 
 @using (Html.BeginForm("ExternalLoginConfirmation", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
 {
@@ -12,13 +12,13 @@
     <h4>Formulario de asociación</h4>
     <hr />
     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-    <p class="text-info">
+    <p class="text-info" style = "color:white" >
         Se autenticó correctamente con <strong>@ViewBag.LoginProvider</strong>.
         Introduzca un nombre de usuario para este sitio y haga clic en el botón Registrar para finalizar
         el inicio de sesión.
     </p>
     <div class="form-group">
-        @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
+        @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label", @style = "color:white" })
         <div class="col-md-10">
             @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
             @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })

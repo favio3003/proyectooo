@@ -1,13 +1,22 @@
-﻿.navbar-inversess {
-    background-color: #1DF055 !important
+﻿.navbarcolor {
+    background-color: #07423E;
+}
+.navbar-inversess {
+    background-color: #07423E !important
+}
+.td a{
+    color:white;
+}
+.navbar-inverse {
+    background-color: #07423E
 }
 
     .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
-        background-color: #000000
+        background-color: #808080
     }
 
     .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
-        background-color: #080000
+        background-color: #808080
     }
 
 .dropdown-menu {
@@ -15,7 +24,7 @@
 }
 
     .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
-        background-color: #03FF46
+        background-color: #4A4A4A
     }
 
 .navbar-inverse {
@@ -30,16 +39,16 @@
     border-color: #080808
 }
 
-    .navbar-inverse .navbar-brand {
+ .navbar-inverse .navbar-brand {
         color: #FFFFFF
     }
 
-        .navbar-inverse .navbar-brand:hover {
-            color: #000000
+  .navbar-inverse .navbar-brand:hover {
+            color: #FFFFFF
         }
 
     .navbar-inverse .navbar-nav > li > a {
-        color: #000000
+        color: #B3B3B3
     }
 
         .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
@@ -55,7 +64,7 @@
         }
 
 .dropdown-menu > li > a {
-    color: #333333
+    color: #000000
 }
 
     .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
@@ -80,6 +89,8 @@
 
 
 
+
+
 body {
     padding-top: 8px;
     padding-bottom: 30px;
@@ -101,19 +112,12 @@ body {
     position: relative;
 }
 
-.container-logo {
-    padding: 5px;
-    width: 100%;
-    height: 90px;
-    border-top: 2px solid green;
-    border-bottom: 1px solid black;
-    box-shadow: 0px 1px 1px 1px black;
-}
+
 
 .divUser {
     float: right;
     padding-top: 62px;
-    padding-right: 5px;
+    padding-right: 0px;
 }
 
     .divUser > a {
@@ -124,15 +128,19 @@ body {
         .divUser > a:hover {
             color: #ffb81c;
         }
-
+.container-logo {
+    padding: 5px;
+    width: 100%;
+    height: 250px;
+}
 .logo-image {
-    margin: 2px;
-    float: left;
+    margin: 0px;
+    float: none;
 }
 
     .logo-image > img {
-        height: 75px;
-        width: 100px;
+        height: 250px;
+        width: 100%;
     }
 
 .alinearCentroo {
