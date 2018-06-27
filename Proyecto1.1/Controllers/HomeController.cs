@@ -16,12 +16,12 @@ namespace Proyecto1._1.Controllers
         {
             _context = new ApplicationDbContext();
         }
-
+ 
         public ActionResult Index()
         {
             return View();
         }
-
+        [Authorize]
         public ActionResult perfilPasante(int id)
         {
             var perfil = from perfil1 in _context.Estudiante where perfil1.id == id orderby perfil1.apellido
@@ -29,7 +29,7 @@ namespace Proyecto1._1.Controllers
             return View(perfil);
         }
 
-
+        [Authorize]
         public ActionResult ListaPasantes()
         {
             var lista = _context.Estudiante.ToList();
@@ -62,6 +62,7 @@ namespace Proyecto1._1.Controllers
             return View();
         }
 
+        [Authorize]
         public ActionResult Comentario()
         {
             return View();
@@ -78,7 +79,7 @@ namespace Proyecto1._1.Controllers
             _context.SaveChanges();
             return RedirectToAction("dejarComentario", "Home");
         }
-
+   
         public ActionResult dejarComentario()
         {
             var comentario = from comen in _context.comentario

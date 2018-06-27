@@ -11,21 +11,26 @@ namespace Proyecto1._1.Models
     {
         [Required(ErrorMessage = "Otros?")]
         public int id { get; set; }
+       
         [Display(Name = "Carnet de Identidad")]
         [Required(ErrorMessage = "Ingrese un carnet")]
+      
         public string ci { get; set; }
         [Display(Name = "Nombre")]
         [Required (ErrorMessage = "Todos tienen nombre")]
+        [RegularExpression("^[A-ZÑÁÉÍÓÚa-z]+$", ErrorMessage = "Porfavor Ingrese Letras")]
         public string nombre { get; set; }
         [Display(Name = "Apellido")]
         [Required(ErrorMessage = "Todos tienen Apellido")]
+        [RegularExpression("^[A-ZÑÁÉÍÓÚa-z]+$", ErrorMessage = "Porfavor Ingrese Letras")]
         public string apellido { get; set; }
         [Display(Name = "Fecha de Nacimiento")]
         [Required(ErrorMessage = "Ingresa una fecha de nacimiento")]
         public DateTime fechadenacimiento { get; set; }
         [Required(ErrorMessage = "Necesito registrar tu telefono")]
         [Display(Name = "Telefono")]
-       // [Required(ErrorMessage = "Nada de anónimos.")]
+        [RegularExpression("^[0-9]+$", ErrorMessage = "Porfavor Ingrese solamente numeros")]
+        // [Required(ErrorMessage = "Nada de anónimos.")]
         public string telefono { get; set; }
         [Display(Name = "Sexo")]       
         public string sexo { get; set; }

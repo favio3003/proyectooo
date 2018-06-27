@@ -27,13 +27,19 @@ namespace Proyecto1._1.Controllers
         {
             return View();
         }
-        //[Authorize]
+        [Authorize]
         public ActionResult Index()
         {
+            var correo = User.Identity.GetUserId();
+            var estudiante = _context.Estudiante.SingleOrDefault(c => c.Registerid == correo);
+            if (estudiante == null)
+            {
+                return RedirectToAction("Inicio", "Estudiante");
+            }
             var Area = _context.Area.ToList();
             return View(Area);
         }
-       // [Authorize]
+       [Authorize]
         public ActionResult Materia(int id)
         {
             var Materia = from m in _context.Materia
@@ -41,7 +47,7 @@ namespace Proyecto1._1.Controllers
                           select m;
             return View(Materia);
         }
-
+        [Authorize]
         public ActionResult pasantesMateria(int id)
         {
             var pasante = from PerfilPasante in _context.materiaEstudiantes
@@ -49,6 +55,7 @@ namespace Proyecto1._1.Controllers
                           select PerfilPasante.Estudiante_Model;
                 return View(pasante);
         }
+        [Authorize]
         public ActionResult Details(int Id)
         {
             var est = _context.Estudiante.SingleOrDefault(c => c.id == Id);
@@ -62,11 +69,12 @@ namespace Proyecto1._1.Controllers
         {
             return View();
         }
-
+        [Authorize]
         public ActionResult Inicio()
         {
             return View();
         }
+        [Authorize]
         public ActionResult Pasantes()
         {
             return View();
