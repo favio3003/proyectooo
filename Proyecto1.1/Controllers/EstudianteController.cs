@@ -99,16 +99,34 @@ namespace Proyecto1._1.Controllers
         [AcceptVerbs(HttpVerbs.Post)]
         public ActionResult Inicio(Estudiante_Model est)
         {
+            var user = User.Identity.GetUserId();
+            var estudianteDb = _context.Estudiante.SingleOrDefault(c => c.Registerid == user);
             if (!ModelState.IsValid)
             {
-                return View("Inicio",est);
+                return View("Inicio", est);
             }
             else
             {
-                est.Registerid = User.Identity.GetUserId();
-                _context.Estudiante.Add(est);
-                _context.SaveChanges();
-                return RedirectToAction("Index", "Estudiante");
+                if (estudianteDb == null)
+                {
+                    est.Registerid = user;
+                    _context.Estudiante.Add(est);
+                    _context.SaveChanges();
+                    return RedirectToAction("Index", "Estudiante");
+                }
+                else
+                {
+                    if (estudianteDb == null)
+                        return HttpNotFound();
+                    estudianteDb.ci = est.ci;
+                    estudianteDb.nombre = est.nombre;
+                    estudianteDb.apellido = est.apellido;
+                    estudianteDb.fechadenacimiento = est.fechadenacimiento;
+                    estudianteDb.telefono = est.telefono;
+                    estudianteDb.sexo = est.sexo;
+                    _context.SaveChanges();
+                    return RedirectToAction("Index", "Home");
+                }
             }
         }
 
@@ -136,7 +154,30 @@ namespace Proyecto1._1.Controllers
             e.telefono = est.telefono;
             return View("New", "Estudiante");
         }*/
-
+        [Authorize]
+        public ActionResult Editar()
+        {
+            var user = User.Identity.GetUserId();
+            if (user == null)
+            {
+                return RedirectToAction("Register", "Account");
+            }
+            var estudiante = _context.Estudiante.SingleOrDefault(c => c.Registerid == user);
+            if (estudiante == null)
+            {
+                return RedirectToAction("Inicio", "Estudiante");
+            }
+            var viewModel = new Estudiante_Model()
+            {
+                nombre = estudiante.nombre,
+                apellido = estudiante.apellido,
+                ci = estudiante.ci,
+                sexo = estudiante.sexo,
+                telefono = estudiante.telefono,
+                fechadenacimiento = estudiante.fechadenacimiento
+            };
+            return View("Inicio", viewModel);
+        }
         [Authorize]
         public ActionResult deleteEstudiante(int id)
         {
